@@ -7,9 +7,7 @@
   <meta name="description" content="Clyrex Games is an independent mobile game studio based in İzmir. Creator of DeckBall: Football Card RPG and Money Clicker Tycoon.">
 
   <!-- Security headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
@@ -88,16 +86,14 @@
             <div class="phone-notch"></div>
             <img src="assets/images/deckball-screen2.png"
                  alt="DeckBall match screen"
-                 class="phone-img"
-                 onerror="this.style.display='none'">
+                 class="phone-img">
             <div class="phone-glare"></div>
           </div>
           <div class="phone phone--front">
             <div class="phone-notch"></div>
             <img src="assets/images/deckball-screen1.png"
                  alt="DeckBall career screen"
-                 class="phone-img"
-                 onerror="this.style.display='none'">
+                 class="phone-img">
             <div class="phone-glare"></div>
             <div class="tap-glow"></div>
           </div>
@@ -160,7 +156,7 @@
           <img src="assets/images/deckball-icon.png"
                alt="DeckBall icon"
                class="gcard-icon"
-               onerror="this.parentElement.innerHTML='<div class=\'icon-fallback db-fallback\'>⚽</div>'">
+               data-fallback="db">
           <span class="gcard-badge">New</span>
         </div>
         <div class="gcard-body">
@@ -190,7 +186,7 @@
           <img src="assets/images/mct-icon.png"
                alt="Money Clicker Tycoon icon"
                class="gcard-icon"
-               onerror="this.parentElement.innerHTML='<div class=\'icon-fallback mct-fallback\'>💰</div>'">
+               data-fallback="mct">
         </div>
         <div class="gcard-body">
           <h3 class="gcard-name">Money Clicker Tycoon</h3>
