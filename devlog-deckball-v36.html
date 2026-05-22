@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeckBall v3.6 — Devlog — Clyrex Games</title>
+  <meta name="description" content="DeckBall v3.6: DeckTalk social feed, 4 new languages, 3 new countries, Ballon d'Or event chain, and a long list of improvements.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <meta property="og:title" content="DeckBall v3.6 Devlog — Clyrex Games">
+  <meta property="og:description" content="DeckTalk social feed, 4 new languages, 3 new countries, Ballon d'Or event chain, and a long list of improvements.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Clyrex Games">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">CLYREX</a>
+    <div class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#studio">Studio</a>
+      <a href="/devlog" class="nav-active">Devlog</a>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-breadcrumb reveal">
+        <a href="/devlog">← Devlog</a>
+        <span class="post-breadcrumb-sep">/</span>
+        <span>DeckBall v3.6</span>
+      </div>
+
+      <div class="post-meta-row reveal">
+        <span class="dlog-game-tag">DeckBall</span>
+        <span class="dlog-version">v3.6</span>
+        <span class="dlog-tag">Major Release</span>
+        <time class="dlog-date" datetime="2026-05-22">May 22, 2026</time>
+      </div>
+
+      <h1 class="post-title reveal">DeckTalk, 4 New Languages<br>&amp; 3 New Leagues</h1>
+      <p class="post-sub reveal">12 commits. A social media feed inside a football card game. Four languages shipped in one go. This one took a while.</p>
+
+      <div class="post-commit-range reveal">
+        <span class="post-commit-label">Commits</span>
+        <code class="post-commit">bfa7e13 → 3602202</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="post-body-section">
+    <div class="post-body-inner">
+
+      <!-- Major Features -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Major Features</div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">01</span>
+            <h2 class="post-feature-title">DeckTalk</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            DeckTalk is an in-game social media feed that reacts to what's happening in your career in real time.
+            Scored a hat-trick? Your mentions are on fire. Got caught in a scandal? The pundits won't let it go.
+            Pulled off a 4-card combo? Someone clipped it.
+          </p>
+          <p class="post-p">
+            The feed runs on 20 distinct account types — fans, pundits, reporters, rival supporters, trolls, transfer
+            rumour accounts — each with their own voice and agenda. Over 70 templates across categories like match
+            reactions, transfer news, scandal coverage, and combo highlights. Posts appear with like counts and
+            retweet numbers that reflect how big the moment actually was.
+          </p>
+          <ul class="post-list">
+            <li>20 account types with distinct tones and posting patterns</li>
+            <li>70+ message templates across match, transfer, scandal, and combo categories</li>
+            <li>Like and retweet mechanics tied to event weight</li>
+            <li>Real-time feed updates during and after matches</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">02</span>
+            <h2 class="post-feature-title">4 New Languages</h2>
+            <span class="post-feature-tag">Localisation</span>
+          </div>
+          <p class="post-p">
+            German, Spanish, Italian, and Portuguese are now fully supported. Each language required 10 translation
+            files — events, cards, achievements, dating profiles, narrative text, UI strings, and more. This brings
+            the total to 7 languages.
+          </p>
+          <p class="post-p">
+            The translation pipeline got an upgrade too. A new <code class="post-inline-code">translate_all.js</code> script
+            handles bulk translation via the Google Translate API, with a local cache layer to avoid redundant API calls
+            on re-runs. All output goes through a manual review pass before shipping.
+          </p>
+          <ul class="post-list">
+            <li>German (DE), Spanish (ES), Italian (IT), Portuguese (PT) — full game content</li>
+            <li>10 files per language: events, cards, achievements, dating, narratives, UI</li>
+            <li>Total language count: 7</li>
+            <li>translate_all.js — Google Translate API + caching layer</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">03</span>
+            <h2 class="post-feature-title">3 New Countries &amp; Leagues</h2>
+            <span class="post-feature-tag">Content</span>
+          </div>
+          <p class="post-p">
+            DeckBall now covers 15 countries. The USA, Mexico, and Saudi Arabia join the roster, each with their own
+            top-flight league and clubs. <code class="post-inline-code">deckball_teams.json</code> was updated accordingly
+            and the round-robin scheduling algorithm was improved to handle the new data cleanly.
+          </p>
+          <ul class="post-list">
+            <li>USA — American League 1</li>
+            <li>Mexico — Mexican League 1</li>
+            <li>Saudi Arabia — Saudi League 1</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">04</span>
+            <h2 class="post-feature-title">Ballon d'Or Event Chain</h2>
+            <span class="post-feature-tag">New Event</span>
+          </div>
+          <p class="post-p">
+            The Ballon d'Or now has proper narrative weight. When you're nominated, you get an announcement
+            cutscene followed by a locker room tension sequence. Then comes the choice: spend money on PR,
+            run a full campaign, or stay focused and let the football speak for itself.
+          </p>
+          <p class="post-p">
+            Each option has real consequences that play out across multiple in-game weeks. The result of the award
+            reacts to your choice, your season stats, and some controlled randomness. It's not a guaranteed reward
+            for grinding — it's a storyline with stakes.
+          </p>
+          <ul class="post-list">
+            <li>Nomination announcement + locker room tension sequence</li>
+            <li>Three strategic paths: money, PR campaign, silent focus</li>
+            <li>Multi-week consequence chain leading to the award event</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Improvements -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Improvements</div>
+
+        <div class="post-improvements-grid">
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Manager Trust Rebalanced</h3>
+            <p class="post-impr-body">
+              Negative trust penalties for high-profile players now scale down based on match count and player
+              popularity. The cap dropped from -30 to -10, which means star players can actually stay
+              on good terms with their manager across a long stint at a club.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Combo System in Match Log</h3>
+            <p class="post-impr-body">
+              Combos now appear as dedicated entries in the match log with colour-coded display.
+              The type of combo — chain, counter, set-piece — is labeled and styled distinctly
+              so the action is easy to read back after a match.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Spring Animations</h3>
+            <p class="post-impr-body">
+              GameAlert and Monetization screens now use spring animations for entry and exit.
+              The physics-based easing makes the UI feel less mechanical and more alive, especially
+              on repeated interactions.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Auto-Save on Purchase</h3>
+            <p class="post-impr-body">
+              Deck and asset purchases now trigger an automatic save. No more losing a card pack
+              acquisition to an unexpected crash or background kill. Save happens immediately on
+              transaction confirm.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Language Selection Screen</h3>
+            <p class="post-impr-body">
+              The language picker was rebuilt with a 2-column layout and colour-coded buttons —
+              each language has its own accent tint. Handling 7 languages in the old single-column
+              list was a mess. This is cleaner and faster to navigate.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technical -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Technical</div>
+
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Metro crash fix</strong> — Resolved a crash affecting the Windows FallbackWatcher and
+            Android Gradle builds. Was a silent blocker for certain dev environments.
+          </li>
+          <li>
+            <strong>Round-robin algorithm</strong> — The league scheduling algorithm was refactored to handle
+            new country data without edge-case fixture collisions.
+          </li>
+          <li>
+            <strong>deckball_teams.json</strong> — Updated with all club data for the three new countries and leagues.
+          </li>
+          <li>
+            <strong>Version bump</strong> — v3.1 → v3.6, reflecting the scope of changes across this release cycle.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Next -->
+      <div class="post-chapter post-chapter--last reveal">
+        <div class="post-chapter-label">What's Next</div>
+        <p class="post-p">
+          More countries are in scope. The DeckTalk system opens up a lot of room for deeper narrative events —
+          that's something I want to explore in the next cycle. Performance tuning on older Android devices
+          is also on the list.
+        </p>
+        <p class="post-p">
+          If you're playing v3.6, the Ballon d'Or chain is worth a career playthrough on its own.
+        </p>
+        <div class="post-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+            </svg>
+            Play DeckBall v3.6
+          </a>
+          <a href="/devlog" class="btn-ghost">← All Devlogs</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">CLYREX GAMES</span>
+        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="https://play.google.com/store/search?q=clyrex&c=apps"
+           target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

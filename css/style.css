@@ -1105,6 +1105,427 @@ body::after {
 
 .policy-contact p { margin-bottom: 0; }
 
+/* ── Devlog — nav active state ── */
+.nav-active {
+  color: var(--text) !important;
+}
+
+/* ── Devlog — index page ── */
+.devlog-header {
+  padding: clamp(8rem, 14vw, 11rem) var(--pad) clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.devlog-header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+}
+
+.devlog-title-xl {
+  font-family: var(--font-d);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.devlog-header-sub {
+  font-size: 0.92rem;
+  color: var(--text2);
+  line-height: 1.85;
+  max-width: 360px;
+  align-self: end;
+}
+
+.devlog-list {
+  padding: clamp(3rem, 6vw, 5rem) var(--pad);
+}
+
+.devlog-entries {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.dlog-card {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 3rem;
+  align-items: start;
+  padding: 2.75rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.dlog-card:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.dlog-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+.dlog-game-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--font-d);
+}
+
+.dlog-date {
+  font-size: 0.72rem;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+}
+
+.dlog-version-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.dlog-version {
+  font-family: var(--font-d);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.dlog-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text3);
+  text-transform: uppercase;
+}
+
+.dlog-card-title {
+  font-family: var(--font-d);
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
+}
+
+.dlog-card-excerpt {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  max-width: 560px;
+}
+
+.dlog-card-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dlog-pill {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  border: 1px solid var(--border);
+  padding: 0.22rem 0.65rem;
+  border-radius: 3px;
+  font-family: var(--font-d);
+  font-weight: 500;
+}
+
+.dlog-card-action {
+  padding-top: 0.2rem;
+}
+
+.dlog-read-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.dlog-read-link:hover { opacity: 0.65; }
+
+/* ── Devlog — post page ── */
+.post-hero {
+  padding: clamp(8rem, 14vw, 11rem) var(--pad) clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.post-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-breadcrumb {
+  font-size: 0.75rem;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+
+.post-breadcrumb a {
+  color: var(--text3);
+  transition: color 0.2s;
+}
+
+.post-breadcrumb a:hover { color: var(--text2); }
+
+.post-breadcrumb-sep { color: var(--border2); }
+
+.post-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.post-title {
+  font-family: var(--font-d);
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.25rem;
+}
+
+.post-sub {
+  font-size: 1rem;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.post-commit-range {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+}
+
+.post-commit-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  color: var(--text3);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.post-commit {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--text2);
+  letter-spacing: 0.04em;
+}
+
+/* Post body */
+.post-body-section {
+  padding: clamp(3.5rem, 7vw, 6rem) var(--pad);
+}
+
+.post-body-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-chapter {
+  margin-bottom: 4rem;
+}
+
+.post-chapter-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text3);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-feature {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-feature:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.post-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.post-feature-num {
+  font-family: var(--font-d);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.post-feature-title {
+  font-family: var(--font-d);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.post-feature-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--text3);
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.22rem 0.6rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.post-p {
+  font-size: 0.93rem;
+  color: var(--text2);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+
+.post-list {
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.post-list li {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.7;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.post-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.post-list--tech li {
+  color: var(--text2);
+}
+
+.post-list--tech strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.post-inline-code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.84em;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 0.1em 0.45em;
+  border-radius: 3px;
+}
+
+/* Improvements grid */
+.post-improvements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.post-impr {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem 1.5rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.post-impr:hover {
+  background: var(--surface2);
+  border-color: var(--border2);
+}
+
+.post-impr-title {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.post-impr-body {
+  font-size: 0.83rem;
+  color: var(--text2);
+  line-height: 1.75;
+}
+
+/* Last chapter / CTA */
+.post-chapter--last {
+  border-top: 1px solid var(--border);
+  padding-top: 3rem;
+  margin-top: 1rem;
+}
+
+.post-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text3);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.btn-ghost:hover { color: var(--text2); }
+
 /* ── Mobile — subpages ── */
 @media (max-width: 900px) {
   .game-hero-grid,
@@ -1112,10 +1533,34 @@ body::after {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  .devlog-header-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .devlog-header-sub { max-width: 100%; }
+
+  .dlog-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .dlog-card-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .post-improvements-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
   .game-features-grid { grid-template-columns: 1fr; }
   .icon-hero-wrap { padding: 2.5rem; }
   .icon-hero-img { width: 120px; height: 120px; }
+  .post-title { font-size: clamp(2rem, 10vw, 2.75rem); }
+  .devlog-title-xl { font-size: clamp(2.5rem, 12vw, 4rem); }
 }
