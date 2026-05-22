@@ -1016,6 +1016,52 @@ body::after {
   line-height: 1.5;
 }
 
+/* ── Screenshots gallery ── */
+.screenshots-section {
+  padding: clamp(4rem, 8vw, 6rem) var(--pad);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.screenshots-strip {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.screenshots-strip::-webkit-scrollbar { display: none; }
+.screenshots-strip:active { cursor: grabbing; }
+
+.screenshots-track {
+  display: flex;
+  gap: 1.25rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+.ss-item {
+  flex: 0 0 auto;
+  width: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s;
+}
+
+.ss-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--border2);
+}
+
+.ss-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Privacy Policy ── */
 .policy-section {
   padding: clamp(8rem, 12vw, 10rem) var(--pad) clamp(4rem, 8vw, 6rem);
