@@ -1016,6 +1016,75 @@ body::after {
   line-height: 1.5;
 }
 
+/* ── Devlog download CTA banner ── */
+.devlog-cta-banner {
+  padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.devlog-cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.devlog-cta-eyebrow {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+}
+
+.devlog-cta-heading {
+  font-family: var(--font-d);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.devlog-cta-sub {
+  font-size: 0.88rem;
+  color: var(--text2);
+}
+
+.devlog-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.devlog-cta-btn:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .devlog-cta-inner { flex-direction: column; align-items: flex-start; }
+  .devlog-cta-btn { width: 100%; justify-content: center; }
+}
+
 /* ── Screenshots gallery ── */
 .screenshots-section {
   padding: clamp(4rem, 8vw, 6rem) var(--pad);
