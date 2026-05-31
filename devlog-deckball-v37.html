@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeckBall v3.7 — Devlog — Clyrex Games</title>
+  <meta name="description" content="DeckBall v3.7: a Dating App, NPC relationships, a full career arc with a season-end Gala and retirement, 17 hand-drawn match action scenes, a cleats system, and Indonesian support.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <meta property="og:title" content="DeckBall v3.7 Devlog — Clyrex Games">
+  <meta property="og:description" content="From match sim to life sim. Dating App, NPC relationships, a full career arc, 17 hand-drawn match scenes, cleats, and Indonesian support.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Clyrex Games">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP3QK9B61D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DP3QK9B61D');
+  </script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">CLYREX</a>
+    <div class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#studio">Studio</a>
+      <a href="/devlog" class="nav-active">Devlog</a>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-breadcrumb reveal">
+        <a href="/devlog">← Devlog</a>
+        <span class="post-breadcrumb-sep">/</span>
+        <span>DeckBall v3.7</span>
+      </div>
+
+      <div class="post-meta-row reveal">
+        <span class="dlog-game-tag">DeckBall</span>
+        <span class="dlog-version">v3.7</span>
+        <span class="dlog-tag">Major Release</span>
+        <time class="dlog-date" datetime="2026-05-31">May 31, 2026</time>
+      </div>
+
+      <h1 class="post-title reveal">From Match Sim<br>to Life Sim</h1>
+      <p class="post-sub reveal">34 commits. This release pushes DeckBall past the pitch. A dating app, NPCs who form opinions about you, a career that actually has a beginning and an end, and 17 hand-drawn match scenes. Off the pitch finally has its own life.</p>
+
+      <div class="post-commit-range reveal">
+        <span class="post-commit-label">Commits</span>
+        <code class="post-commit">4f9d588 → bdd4ee1</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="post-body-section">
+    <div class="post-body-inner">
+
+      <!-- Intro -->
+      <div class="post-chapter reveal">
+        <p class="post-p">
+          v3.6 was about the world reacting to you — DeckTalk put fans, pundits, and rivals in your mentions.
+          v3.7 is about everything that happens when you put the phone down. Your private life, the people
+          around you, and the shape of your career from your first season to your last.
+        </p>
+      </div>
+
+      <!-- Major Features -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Major Features</div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">01</span>
+            <h2 class="post-feature-title">Dating App</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            DeckBall now has a full dating and relationship layer. Swipe through profiles, start a conversation,
+            send gifts, and keep a relationship alive over the course of a career. It runs on its own screen with
+            its own art and background, and it ties back into the rest of the game — your private life is now part
+            of the story DeckTalk and the press get to talk about.
+          </p>
+          <ul class="post-list">
+            <li>Swipe-based profile discovery</li>
+            <li>Chat, gifting, and ongoing relationship state</li>
+            <li>Dedicated UI with custom backgrounds and art</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">02</span>
+            <h2 class="post-feature-title">NPC Relationships &amp; Moods</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            The people in your world are no longer flat. Every NPC now carries a relationship value and a mood —
+            happy, neutral, suspicious, or angry — and they interact with you based on it. Some warm up to you,
+            some keep their distance, and how you treat them over time decides which.
+          </p>
+          <ul class="post-list">
+            <li>Per-NPC relationship tracking</li>
+            <li>Four mood states: happy / neutral / suspicious / angry</li>
+            <li>Interactions that change based on how an NPC feels about you</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">03</span>
+            <h2 class="post-feature-title">The Career Arc</h2>
+            <span class="post-feature-tag">New Content</span>
+          </div>
+          <p class="post-p">
+            A career now has a real shape. You start as a young prospect, climb to your peak, and eventually
+            close it out — and the game marks every stage. Your profile photo even ages with you: a young face
+            up to 21, your prime from 22 to 29, and a veteran look from 30 on.
+          </p>
+          <p class="post-p">
+            Seasons end with a Gala — an awards and highlights screen that celebrates the year. When it's all
+            over, a dedicated Retirement screen gives your career a proper closing scene, and a detailed Career
+            Statistics modal lets you look back on everything you achieved.
+          </p>
+          <ul class="post-list">
+            <li>Age-based profile photos: young (≤21) → peak (22–29) → veteran (≥30)</li>
+            <li>Season-end Gala with awards and highlights</li>
+            <li>Retirement screen — a closing scene for the end of a career</li>
+            <li>Career Statistics modal with a full career summary</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">04</span>
+            <h2 class="post-feature-title">17 Match Action Scenes</h2>
+            <span class="post-feature-tag">Visuals</span>
+          </div>
+          <p class="post-p">
+            The biggest visual leap in DeckBall yet. 17 hand-drawn action scenes are now wired directly to match
+            moments — a header, a free kick, a dribble, a nutmeg, a long-range shot, a tackle, a block, a penalty,
+            a goal, conceding, losing the ball, a keeper save, and more. When something happens in a match, you see it.
+          </p>
+          <p class="post-p">
+            Kits are colored dynamically: shirt, shorts, and socks all take your team's colors, and on the
+            <code class="post-inline-code">base_17</code> scene your opponent shows up in their own. The result screen
+            was rebuilt from scratch — full-bleed, uncropped artwork with a blurred fill behind it, a cinematic gradient,
+            an entry animation, and a shadowed, glowing title. It's responsive across every screen size.
+          </p>
+          <ul class="post-list">
+            <li>17 action scenes tied to live match events</li>
+            <li>Dynamic kit coloring for both your team and the opponent</li>
+            <li>Fully redesigned, cinematic result screen</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">05</span>
+            <h2 class="post-feature-title">Cleats System</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            A new cleats system feeds directly into your progression and your odds on the pitch. Eight cleat models
+            are available to buy with in-game cash or gems, from the basic Standard Cleats meant for daily training
+            and early-career play up to higher-end options. The boots you wear are now a real part of how you build
+            your player.
+          </p>
+          <ul class="post-list">
+            <li>8 cleat models in the catalog</li>
+            <li>Purchasable with cash or gems</li>
+            <li>Direct impact on progression and in-match success chance</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">06</span>
+            <h2 class="post-feature-title">Indonesian Support</h2>
+            <span class="post-feature-tag">Localisation</span>
+          </div>
+          <p class="post-p">
+            DeckBall is now fully playable in Indonesian, translated end to end with a complete language pack.
+            That brings the total to 8 supported languages.
+          </p>
+          <ul class="post-list">
+            <li>Indonesian (ID) — full game content</li>
+            <li>Total language count: 8</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Improvements -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Improvements</div>
+
+        <div class="post-improvements-grid">
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">In-Game Menu</h3>
+            <p class="post-impr-body">
+              A new in-game menu (InGameMenu) brings the core actions together in one place, so you're not
+              hunting across screens mid-session.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Standings &amp; Transfer Screens</h3>
+            <p class="post-impr-body">
+              Two new dedicated screens: a full league standings table and a transfer offers view, so you can
+              read the table and weigh offers without leaving the flow.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Micro-Events &amp; Reworked Events</h3>
+            <p class="post-impr-body">
+              The event system got a rework, plus a new layer of smaller micro-events that fill the gaps between
+              the big story beats and keep a season feeling busy.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Radio Music</h3>
+            <p class="post-impr-body">
+              Nine new radio tracks were added, giving the game its own soundtrack to sit under the action.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">New Art Pack</h3>
+            <p class="post-impr-body">
+              A large batch of fresh art: 38 cards, 8 cleats, 26 lifestyle items, and new backgrounds for wins,
+              draws, losses, dating, the intro, and the social feed.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Cinematic Result Screen</h3>
+            <p class="post-impr-body">
+              The post-match result screen now shows full, uncropped artwork over a blurred fill with a cinematic
+              gradient and an entry animation — responsive on every screen size.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technical -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Technical</div>
+
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Modular Hub</strong> — The Hub screen was broken into modular components
+            (<code class="post-inline-code">StandingsSheet</code>, <code class="post-inline-code">TransferModal</code>,
+            <code class="post-inline-code">HubComponents</code>, <code class="post-inline-code">hubShared</code>)
+            for cleaner maintenance and better performance.
+          </li>
+          <li>
+            <strong>Store &amp; game logic</strong> — A large update to the game logic and store (+1,100 lines)
+            covering the economy, career progression, and the national team engine.
+          </li>
+          <li>
+            <strong>check_locales script</strong> — A new script that flags missing translations before they ship.
+          </li>
+          <li>
+            <strong>Cleanup</strong> — Removed the old <code class="post-inline-code">src/design/</code> prototype and
+            migration folder.
+          </li>
+          <li>
+            <strong>Result screen fixes</strong> — Fixed aspect-ratio and responsive issues on the result screen
+            (cropping and unwanted gaps).
+          </li>
+          <li>
+            <strong>Version bump</strong> — v3.6 → v3.7.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Next -->
+      <div class="post-chapter post-chapter--last reveal">
+        <div class="post-chapter-label">What's Next</div>
+        <p class="post-p">
+          The life-sim layer has a lot of room left in it. Now that NPCs hold opinions and the dating app is live,
+          the next step is deeper narrative threads that pull those systems, DeckTalk, and your on-pitch career
+          into the same storyline. Performance tuning on older Android devices stays on the list too.
+        </p>
+        <p class="post-p">
+          If you're jumping into v3.7, run a career all the way through — the age-based portraits, the Gala, and the
+          retirement screen are best experienced as one arc.
+        </p>
+        <div class="post-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+            </svg>
+            Play DeckBall v3.7
+          </a>
+          <a href="/devlog" class="btn-ghost">← All Devlogs</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="devlog-cta-banner">
+    <div class="devlog-cta-inner">
+      <div class="devlog-cta-text">
+        <span class="devlog-cta-eyebrow">Available now on Android</span>
+        <h2 class="devlog-cta-heading">Ready to build your career?</h2>
+        <p class="devlog-cta-sub">15 countries. 691 clubs. A full life on and off the pitch. Free to download.</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+         class="devlog-cta-btn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+        </svg>
+        Download on Google Play
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">CLYREX GAMES</span>
+        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="https://play.google.com/store/search?q=clyrex&c=apps"
+           target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
