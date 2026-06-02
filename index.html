@@ -25,12 +25,8 @@
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP3QK9B61D"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DP3QK9B61D');
-  </script>
+  <script src="js/analytics.js"></script>
+  <script src="js/i18n.js"></script>
 </head>
 <body>
 
@@ -38,10 +34,11 @@
   <nav class="nav" id="nav">
     <a href="/" class="nav-logo">CLYREX</a>
     <div class="nav-links">
-      <a href="#games">Games</a>
-      <a href="#studio">Studio</a>
-      <a href="/deckball-store">Store</a>
-      <a href="/devlog">Devlog</a>
+      <a href="#games" data-i18n="nav_games">Games</a>
+      <a href="#studio" data-i18n="nav_studio">Studio</a>
+      <a href="/deckball-store" data-i18n="nav_store">Store</a>
+      <a href="/devlog" data-i18n="nav_devlog">Devlog</a>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Language">TR</button>
     </div>
   </nav>
 
@@ -56,10 +53,10 @@
         </h1>
       </div>
       <div class="hero-right">
-        <p>Independent mobile games<br>built for players who want more.</p>
+        <p data-i18n-html="idx_hero_tagline">Independent mobile games<br>built for players who want more.</p>
         <a href="#games" class="scroll-hint">
           <span class="scroll-arrow">↓</span>
-          See the games
+          <span data-i18n="idx_hero_scroll">See the games</span>
         </a>
       </div>
     </div>
@@ -67,17 +64,17 @@
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="stat-n">2</span>
-        <span class="stat-l">Games</span>
+        <span class="stat-l" data-i18n="stat_games_l">Games</span>
       </div>
       <div class="stat-sep"></div>
       <div class="hero-stat">
         <span class="stat-n">6K+</span>
-        <span class="stat-l">Downloads</span>
+        <span class="stat-l" data-i18n="stat_downloads_l">Downloads</span>
       </div>
       <div class="stat-sep"></div>
       <div class="hero-stat">
         <span class="stat-n">4.8</span>
-        <span class="stat-l">Top Rating</span>
+        <span class="stat-l" data-i18n="stat_rating_l">Top Rating</span>
       </div>
     </div>
   </section>
@@ -87,7 +84,7 @@
     <div class="section-row">
       <span class="s-num">01</span>
       <span class="s-rule"></span>
-      <span class="s-label">FEATURED GAME</span>
+      <span class="s-label" data-i18n="idx_featured_label">FEATURED GAME</span>
     </div>
 
     <div class="feature-grid">
@@ -113,18 +110,18 @@
 
       <div class="feature-copy reveal">
         <div class="feature-meta">
-          <span class="genre-tag">Football · Card RPG</span>
+          <span class="genre-tag" data-i18n="tag_football_cardrpg">Football · Card RPG</span>
           <div class="rating-row">
             <span class="stars">★★★★★</span>
             <span class="r-num">4.8</span>
-            <span class="r-count">39 reviews</span>
+            <span class="r-count" data-i18n="reviews_39">39 reviews</span>
           </div>
         </div>
 
         <h2 class="feature-name">DeckBall</h2>
-        <p class="feature-sub">Futbol Kart RPG</p>
+        <p class="feature-sub" data-i18n="db_subtitle">Football Card RPG</p>
 
-        <p class="feature-body">
+        <p class="feature-body" data-i18n="idx_feature_body">
           Start from the bottom. Fight for a place in the lineup.
           Every match, every decision — played with cards.
           Build a career across 15 countries and 691 teams.
@@ -132,10 +129,10 @@
         </p>
 
         <ul class="feature-list">
-          <li>Card-based match decisions</li>
-          <li>15 countries · 691 teams</li>
-          <li>Career RPG with life events</li>
-          <li>8 languages supported</li>
+          <li data-i18n="idx_fl_1">Card-based match decisions</li>
+          <li data-i18n="idx_fl_2">15 countries · 691 teams</li>
+          <li data-i18n="idx_fl_3">Career RPG with life events</li>
+          <li data-i18n="idx_fl_4">8 languages supported</li>
         </ul>
 
         <div class="feature-actions">
@@ -144,7 +141,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
             </svg>
-            Get on Google Play
+            <span data-i18n="btn_googleplay">Get on Google Play</span>
           </a>
           <span class="pegi">PEGI 16</span>
         </div>
@@ -157,7 +154,7 @@
     <div class="section-row">
       <span class="s-num">02</span>
       <span class="s-rule"></span>
-      <span class="s-label">ALL GAMES</span>
+      <span class="s-label" data-i18n="idx_allgames_label">ALL GAMES</span>
     </div>
 
     <div class="games-grid">
@@ -168,12 +165,12 @@
                alt="DeckBall icon"
                class="gcard-icon"
                data-fallback="db">
-          <span class="gcard-badge">New</span>
+          <span class="gcard-badge" data-i18n="badge_new">New</span>
         </div>
         <div class="gcard-body">
           <h3 class="gcard-name">DeckBall</h3>
-          <p class="gcard-genre">Football · Card RPG</p>
-          <p class="gcard-desc">
+          <p class="gcard-genre" data-i18n="tag_football_cardrpg">Football · Card RPG</p>
+          <p class="gcard-desc" data-i18n="idx_db_desc">
             Build your football career from the bottom up. Strategic card-based matches,
             team management, and a life beyond the pitch.
           </p>
@@ -182,12 +179,12 @@
           <div class="gcard-meta">
             <span class="gcard-stars">★ 4.8</span>
             <span class="dot">·</span>
-            <span>3K+ downloads</span>
+            <span data-i18n="downloads_3k">3K+ downloads</span>
           </div>
           <div class="gcard-actions">
-            <a href="/deckball" class="gcard-detail">Details →</a>
+            <a href="/deckball" class="gcard-detail" data-i18n="detail_link">Details →</a>
             <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
-               class="gcard-link" target="_blank" rel="noopener noreferrer">
+               class="gcard-link" target="_blank" rel="noopener noreferrer" data-i18n="playstore_link">
               Play Store ↗
             </a>
           </div>
@@ -204,20 +201,20 @@
         </div>
         <div class="gcard-body">
           <h3 class="gcard-name">Money Clicker Tycoon</h3>
-          <p class="gcard-genre">Idle · Tycoon</p>
-          <p class="gcard-desc">
+          <p class="gcard-genre" data-i18n="mct_genre">Idle · Tycoon</p>
+          <p class="gcard-desc" data-i18n="idx_mct_desc">
             Tap your way to millions. Upgrade your empire, claim daily rewards,
             unlock achievements, and become a money tycoon.
           </p>
         </div>
         <div class="gcard-foot">
           <div class="gcard-meta">
-            <span>3K+ downloads</span>
+            <span data-i18n="downloads_3k">3K+ downloads</span>
           </div>
           <div class="gcard-actions">
-            <a href="/money-clicker-tycoon" class="gcard-detail">Details →</a>
+            <a href="/money-clicker-tycoon" class="gcard-detail" data-i18n="detail_link">Details →</a>
             <a href="https://play.google.com/store/apps/details?id=com.moneyclickertycoon.game"
-               class="gcard-link" target="_blank" rel="noopener noreferrer">
+               class="gcard-link" target="_blank" rel="noopener noreferrer" data-i18n="playstore_link">
               Play Store ↗
             </a>
           </div>
@@ -231,17 +228,17 @@
     <div class="section-row">
       <span class="s-num">03</span>
       <span class="s-rule"></span>
-      <span class="s-label">STUDIO</span>
+      <span class="s-label" data-i18n="idx_studio_label">STUDIO</span>
     </div>
 
     <div class="studio-grid">
       <div class="studio-text reveal">
-        <h2 class="studio-heading">One developer.<br>Serious games.</h2>
-        <p class="studio-body">
+        <h2 class="studio-heading" data-i18n-html="idx_studio_heading">One developer.<br>Serious games.</h2>
+        <p class="studio-body" data-i18n="idx_studio_body1">
           Clyrex is a solo indie studio based in İzmir, Turkey. We make mobile games
           that prioritize depth over simplicity — games worth spending time with.
         </p>
-        <p class="studio-body">
+        <p class="studio-body" data-i18n="idx_studio_body2">
           DeckBall started as a personal love letter to lower-league football culture.
           Every mechanic, every card, every career moment was designed to feel earned —
           not purchased.
@@ -251,15 +248,15 @@
       <div class="studio-facts reveal">
         <div class="sfact">
           <span class="sfact-n">2025</span>
-          <span class="sfact-l">Founded</span>
+          <span class="sfact-l" data-i18n="sfact_founded_l">Founded</span>
         </div>
         <div class="sfact">
           <span class="sfact-n">İzmir</span>
-          <span class="sfact-l">Location</span>
+          <span class="sfact-l" data-i18n="sfact_location_l">Location</span>
         </div>
         <div class="sfact">
           <span class="sfact-n">2</span>
-          <span class="sfact-l">Games shipped</span>
+          <span class="sfact-l" data-i18n="sfact_games_l">Games shipped</span>
         </div>
       </div>
     </div>
@@ -270,13 +267,13 @@
     <div class="footer-inner">
       <div class="footer-left">
         <span class="footer-logo">CLYREX GAMES</span>
-        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+        <span class="footer-copy" data-i18n="foot_copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
       </div>
       <nav class="footer-nav">
-        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="mailto:clyrex9@gmail.com" data-i18n="foot_contact">Contact</a>
         <a href="https://play.google.com/store/search?q=clyrex&c=apps"
            target="_blank" rel="noopener noreferrer">Google Play</a>
-        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/privacy-policy" data-i18n="foot_privacy">Privacy Policy</a>
       </nav>
     </div>
   </footer>

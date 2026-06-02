@@ -94,6 +94,23 @@ body::after {
 
 .nav-links a:hover { color: var(--text); }
 
+/* Dil değiştirici (TR/EN) */
+.lang-toggle {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1;
+}
+.lang-toggle:hover { color: var(--text); border-color: var(--text2); }
+
 /* ── Hero ── */
 .hero {
   min-height: 100svh;

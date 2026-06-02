@@ -32,13 +32,18 @@ const XSOLLA = {
 // 💎  PAKETLER  (bonus dahil — webhook GEMS_BY_SKU ile BİREBİR aynı olmalı!)
 //     SKU isimleri Xsolla katalogunda da aynen oluşturulmalı.
 // ─────────────────────────────────────────────────────────────────────────────
+// badge = i18n anahtarı (yoksa null). Metinler js/i18n.js sözlüğünde.
 const PACKAGES = [
-  { sku: "gems_100",  base: 100,  bonus: 20,  badge: null,            accent: "#3b82f6" },
-  { sku: "gems_500",  base: 500,  bonus: 150, badge: "EN POPÜLER",    accent: "#a855f7" },
-  { sku: "gems_1000", base: 1000, bonus: 350, badge: null,            accent: "#d4a645" },
-  { sku: "gems_2000", base: 2000, bonus: 800, badge: "EN AVANTAJLI",  accent: "#e91e63" },
-  { sku: "vip-pass",  vip: true,  badge: "ABONELİK",                  accent: "#d4a645" },
+  { sku: "gems_100",  base: 100,  bonus: 20,  badge: null,                accent: "#3b82f6" },
+  { sku: "gems_500",  base: 500,  bonus: 150, badge: "badge_popular",     accent: "#a855f7" },
+  { sku: "gems_1000", base: 1000, bonus: 350, badge: null,                accent: "#d4a645" },
+  { sku: "gems_2000", base: 2000, bonus: 800, badge: "badge_bestvalue",   accent: "#e91e63" },
+  { sku: "vip-pass",  vip: true,  badge: "badge_subscription",            accent: "#d4a645" },
 ];
+
+// ── i18n yardımcıları (js/i18n.js yüklenmezse İngilizce/anahtar fallback) ──
+const t   = (k) => (window.I18N ? window.I18N.t(k) : k);
+const loc = () => (window.I18N ? window.I18N.locale : "tr-TR");
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Firebase (yalnızca Google ile otomatik ID doldurma için — opsiyonel)
@@ -68,10 +73,10 @@ function refreshIdStatus() {
   const v = idInput.value.trim();
   if (!v) { idStatus.textContent = ""; idStatus.className = "store-id-status"; return; }
   if (looksLikeUid(v)) {
-    idStatus.textContent = "✓ Geçerli görünüyor";
+    idStatus.textContent = t("id_ok");
     idStatus.className = "store-id-status is-ok";
   } else {
-    idStatus.textContent = "ID formatı beklenenden farklı — kopyaladığından emin ol";
+    idStatus.textContent = t("id_warn");
     idStatus.className = "store-id-status is-warn";
   }
 }
@@ -79,7 +84,7 @@ idInput.addEventListener("input", refreshIdStatus);
 
 // ── Google ile giriş (opsiyonel, lazy-load) ──────────────────────────────────
 googleBtn.addEventListener("click", async () => {
-  googleLbl.textContent = "Yükleniyor…";
+  googleLbl.textContent = t("g_loading");
   googleBtn.disabled = true;
   try {
     const { initializeApp } = await import("https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js");
@@ -93,7 +98,7 @@ googleBtn.addEventListener("click", async () => {
     if (uid) {
       idInput.value = uid;
       refreshIdStatus();
-      googleLbl.textContent = "✓ ID dolduruldu (" + (result.user.email || "Google") + ")";
+      googleLbl.textContent = t("g_filled") + " (" + (result.user.email || "Google") + ")";
 
       // Oyuncu profilini sunucuda oluştur/güncelle (oyunda da görünür olsun).
       // ID token'ı backend doğrular; başarısız olsa bile satın alma engellenmez.
@@ -107,12 +112,12 @@ googleBtn.addEventListener("click", async () => {
         console.warn("[Store] profil senkronu atlandı:", e);
       }
     } else {
-      googleLbl.textContent = "Giriş yapılamadı — ID'yi elle yapıştır";
+      googleLbl.textContent = t("g_failed");
       googleBtn.disabled = false;
     }
   } catch (e) {
     console.warn("[Store] Google giriş hatası:", e);
-    googleLbl.textContent = "Giriş iptal edildi — ID'yi elle yapıştır";
+    googleLbl.textContent = t("g_cancelled");
     googleBtn.disabled = false;
   }
 });
@@ -122,7 +127,7 @@ function buy(pkg) {
   const uid = idInput.value.trim();
   if (!looksLikeUid(uid)) {
     idInput.focus();
-    idStatus.textContent = "Önce geçerli bir Oyuncu ID gir";
+    idStatus.textContent = t("id_need");
     idStatus.className = "store-id-status is-warn";
     return;
   }
@@ -133,7 +138,7 @@ function buy(pkg) {
 
   // Xsolla henüz bağlı değilse kullanıcıyı bilgilendir
   if (!XSOLLA.storeUrl) {
-    alert("Mağaza çok yakında açılıyor! Şu an son onay aşamasındayız.\nOyuncu ID'n: " + uid);
+    alert(t("store_soon") + uid);
     return;
   }
 
@@ -154,15 +159,16 @@ function render() {
 
     const total = pkg.vip ? null : pkg.base + pkg.bonus;
 
+    const l = loc();
     card.innerHTML = `
-      ${pkg.badge ? `<span class="store-card-badge">${pkg.badge}</span>` : ""}
+      ${pkg.badge ? `<span class="store-card-badge">${t(pkg.badge)}</span>` : ""}
       <div class="store-card-icon">${pkg.vip ? "👑" : "💎"}</div>
       ${pkg.vip
         ? `<div class="store-card-amount">VIP</div>
-           <div class="store-card-sub">Aylık abonelik · reklamsız + bonus elmas</div>`
-        : `<div class="store-card-amount">${total.toLocaleString("tr-TR")} <span>elmas</span></div>
-           <div class="store-card-sub">${pkg.base.toLocaleString("tr-TR")} + ${pkg.bonus.toLocaleString("tr-TR")} bonus</div>`}
-      <button class="store-buy-btn" type="button">Satın Al</button>
+           <div class="store-card-sub">${t("vip_sub")}</div>`
+        : `<div class="store-card-amount">${total.toLocaleString(l)} <span>${t("gems_word")}</span></div>
+           <div class="store-card-sub">${pkg.base.toLocaleString(l)} + ${pkg.bonus.toLocaleString(l)} ${t("bonus_word")}</div>`}
+      <button class="store-buy-btn" type="button">${t("buy_btn")}</button>
     `;
     card.querySelector(".store-buy-btn").addEventListener("click", () => buy(pkg));
     grid.appendChild(card);
@@ -170,3 +176,9 @@ function render() {
 }
 
 render();
+
+// Dil değişince paketleri ve durum metnini yeniden çiz
+window.addEventListener("langchange", () => {
+  render();
+  refreshIdStatus();
+});
