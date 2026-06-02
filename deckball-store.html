@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeckBall Store — Elmas & VIP · Clyrex Games</title>
-  <meta name="description" content="DeckBall elmas paketleri ve VIP aboneliği. Oyuncu ID'ni gir, güvenle öde, elmaslar anında hesabına tanımlansın.">
+  <title>DeckBall Store — Gems & VIP · Clyrex Games</title>
+  <meta name="description" content="DeckBall gem packages and VIP subscription. Enter your Player ID, pay securely, and gems are credited to your account instantly.">
 
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
-  <meta property="og:title" content="DeckBall Store — Elmas & VIP">
-  <meta property="og:description" content="DeckBall elmas paketleri ve VIP aboneliği. Web'e özel bonus elmaslar.">
+  <meta property="og:title" content="DeckBall Store — Gems & VIP">
+  <meta property="og:description" content="DeckBall gem packages and VIP subscription. Web-exclusive bonus gems.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Clyrex Games">
 
@@ -46,12 +46,12 @@
       <span class="s-rule"></span>
       <span class="s-label" data-i18n="store_label">DECKBALL STORE</span>
     </div>
-    <h1 class="store-title" data-i18n="store_title">Elmas &amp; VIP</h1>
+    <h1 class="store-title" data-i18n="store_title">Gems &amp; VIP</h1>
     <p class="store-lede" data-i18n="store_lede">
-      Oyuncu ID'ni gir, paketini seç, güvenle öde. Elmaslar Xsolla onayından sonra
-      hesabına anında tanımlanır — oyunu açtığında hazır olur.
+      Enter your Player ID, pick a package, pay securely. Gems are credited to your account
+      right after Xsolla confirms — ready when you open the game.
     </p>
-    <span class="store-bonus-flag" data-i18n="store_bonus_flag">✦ Web'e özel bonus elmas</span>
+    <span class="store-bonus-flag" data-i18n="store_bonus_flag">✦ Web-exclusive bonus gems</span>
   </section>
 
   <!-- STEP 1 — PLAYER ID -->
@@ -59,25 +59,25 @@
     <div class="section-row">
       <span class="s-num">02</span>
       <span class="s-rule"></span>
-      <span class="s-label" data-i18n="store_id_label">OYUNCU ID</span>
+      <span class="s-label" data-i18n="store_id_label">PLAYER ID</span>
     </div>
 
     <div class="store-id-card">
       <p class="store-id-help" data-i18n-html="store_id_help">
-        Oyunda <strong>Ayarlar → Oyuncu ID</strong> bölümünden ID'ni kopyala ve buraya yapıştır.
-        Ödeme bu ID'ye yapılır.
+        Copy your ID from <strong>Settings → Player ID</strong> in the game and paste it here.
+        Payment is made to this ID.
       </p>
 
       <div class="store-id-row">
         <input id="playerId" class="store-id-input" type="text" inputmode="text"
                autocomplete="off" spellcheck="false"
                data-i18n-ph="store_id_ph"
-               placeholder="Oyuncu ID'ni buraya yapıştır" />
+               placeholder="Paste your Player ID here" />
         <span id="idStatus" class="store-id-status" aria-live="polite"></span>
       </div>
 
       <div class="store-id-or">
-        <span data-i18n="store_or">veya</span>
+        <span data-i18n="store_or">or</span>
       </div>
 
       <button id="googleBtn" class="store-google-btn" type="button">
@@ -87,10 +87,10 @@
           <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/>
           <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/>
         </svg>
-        <span id="googleBtnLabel" data-i18n="store_google_btn">Google ile giriş yap (ID'yi otomatik doldur)</span>
+        <span id="googleBtnLabel" data-i18n="store_google_btn">Sign in with Google (auto-fill ID)</span>
       </button>
       <p class="store-google-note" data-i18n="store_google_note">
-        Yalnızca oyunda Google ile giriş yaptıysan çalışır. Aksi halde ID'yi elle yapıştır.
+        Only works if you signed in with Google in the game. Otherwise paste the ID manually.
       </p>
     </div>
   </section>
@@ -100,7 +100,7 @@
     <div class="section-row">
       <span class="s-num">03</span>
       <span class="s-rule"></span>
-      <span class="s-label" data-i18n="store_packages_label">PAKETLER</span>
+      <span class="s-label" data-i18n="store_packages_label">PACKAGES</span>
     </div>
 
     <div id="packageGrid" class="store-grid">

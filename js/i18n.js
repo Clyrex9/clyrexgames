@@ -212,8 +212,8 @@
   function detect() {
     const saved = localStorage.getItem(STORE_KEY);
     if (saved === "en" || saved === "tr") return saved;
-    const nav = (navigator.language || "en").toLowerCase();
-    return nav.startsWith("tr") ? "tr" : "en";
+    // Varsayılan her zaman İngilizce; TR isteyen butondan seçer (seçim hatırlanır).
+    return "en";
   }
 
   let lang = detect();
