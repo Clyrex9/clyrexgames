@@ -1688,3 +1688,141 @@ body::after {
   .post-title { font-size: clamp(2rem, 10vw, 2.75rem); }
   .devlog-title-xl { font-size: clamp(2.5rem, 12vw, 4rem); }
 }
+
+/* ─────────────────────────────────────────
+   DECKBALL STORE
+   ───────────────────────────────────────── */
+.store-hero,
+.store-step {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.store-hero { padding-top: clamp(7rem, 14vw, 10rem); }
+.store-step { padding-top: clamp(3rem, 7vw, 5rem); }
+
+.store-title {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  margin: 1.5rem 0 1rem;
+}
+.store-lede {
+  max-width: 46ch;
+  color: var(--text2);
+  font-size: 1.05rem;
+}
+.store-bonus-flag {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  color: var(--gold);
+  font-family: var(--font-d);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Oyuncu ID kartı ── */
+.store-id-card {
+  margin-top: 1.75rem;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 640px;
+}
+.store-id-help { color: var(--text2); font-size: 0.95rem; margin-bottom: 1.25rem; }
+.store-id-help strong { color: var(--text); }
+
+.store-id-row { display: flex; flex-direction: column; gap: 0.5rem; }
+.store-id-input {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: var(--font-b);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+.store-id-input:focus { outline: none; border-color: var(--accent); }
+.store-id-input::placeholder { color: var(--text3); }
+
+.store-id-status { font-size: 0.85rem; min-height: 1.2em; color: var(--text2); }
+.store-id-status.is-ok   { color: #34d399; }
+.store-id-status.is-warn { color: var(--gold); }
+
+.store-id-or {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 1.4rem 0;
+  color: var(--text3); font-size: 0.85rem;
+}
+.store-id-or::before, .store-id-or::after {
+  content: ""; flex: 1; height: 1px; background: var(--border2);
+}
+
+.store-google-btn {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  width: 100%; justify-content: center;
+  padding: 0.85rem 1.1rem;
+  background: #fff; color: #1f1f28;
+  border: none; border-radius: 10px;
+  font-family: var(--font-b); font-weight: 500; font-size: 0.95rem;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.store-google-btn:hover:not(:disabled) { opacity: 0.9; }
+.store-google-btn:disabled { opacity: 0.6; cursor: default; }
+.store-google-note { color: var(--text3); font-size: 0.8rem; margin-top: 0.7rem; }
+
+/* ── Paket kartları ── */
+.store-grid {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.store-card {
+  position: relative;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.store-card:hover { border-color: var(--card-accent, var(--border2)); transform: translateY(-3px); }
+.store-card.has-badge { border-color: color-mix(in srgb, var(--card-accent) 50%, var(--border)); }
+
+.store-card-badge {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  padding: 0.25rem 0.7rem;
+  background: var(--card-accent);
+  color: #0c0c10;
+  border-radius: 100px;
+  font-family: var(--font-d); font-weight: 600; font-size: 0.68rem;
+  letter-spacing: 0.05em; white-space: nowrap;
+}
+.store-card-icon { font-size: 2.25rem; line-height: 1; }
+.store-card-amount {
+  margin-top: 0.8rem;
+  font-family: var(--font-d); font-weight: 600; font-size: 1.7rem;
+  color: var(--text);
+}
+.store-card-amount span { font-size: 0.9rem; color: var(--text2); font-weight: 400; }
+.store-card-sub { margin-top: 0.3rem; color: var(--text2); font-size: 0.85rem; }
+
+.store-buy-btn {
+  margin-top: 1.3rem; width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--card-accent, var(--accent));
+  color: #0c0c10;
+  border: none; border-radius: 10px;
+  font-family: var(--font-d); font-weight: 600; font-size: 0.95rem;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.store-buy-btn:hover { opacity: 0.9; }
