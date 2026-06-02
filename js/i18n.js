@@ -78,6 +78,15 @@
       gfeat4_desc: "Full localisation, 8 languages",
       db_screenshots_label: "SCREENSHOTS",
 
+      // ── deckball: by the numbers ──
+      stats_label: "BY THE NUMBERS",
+      stats_clubs: "Clubs",
+      stats_leagues: "Leagues",
+      stats_countries: "Countries",
+      stats_events: "Story events",
+      stats_languages: "Languages",
+      stats_words: "Words of story",
+
       // ── store (statik) ──
       store_label: "DECKBALL STORE",
       store_title: "Gems & VIP",
@@ -176,6 +185,15 @@
       gfeat4_label: "8 Dil",
       gfeat4_desc: "Tam yerelleştirme, 8 dil",
       db_screenshots_label: "EKRAN GÖRÜNTÜLERİ",
+
+      // ── deckball: rakamlarla ──
+      stats_label: "RAKAMLARLA",
+      stats_clubs: "Kulüp",
+      stats_leagues: "Lig",
+      stats_countries: "Ülke",
+      stats_events: "Yaşam olayı",
+      stats_languages: "Dil",
+      stats_words: "Kelime içerik",
 
       // ── store (statik) ──
       store_label: "DECKBALL MAĞAZA",

@@ -111,6 +111,43 @@ body::after {
 }
 .lang-toggle:hover { color: var(--text); border-color: var(--text2); }
 
+/* By the numbers — istatistik şeridi */
+.stats-section { border-bottom: 1px solid var(--border); }
+.stats-band {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+.stat-cell {
+  background: var(--bg);
+  padding: 2.2rem 1.25rem;
+  text-align: center;
+}
+.stat-cell .sc-n {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+.stat-cell .sc-l {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text2);
+}
+@media (max-width: 700px) {
+  .stats-band { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ── Hero ── */
 .hero {
   min-height: 100svh;
