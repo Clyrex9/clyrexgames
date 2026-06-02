@@ -35,9 +35,9 @@
 
       // ── index: featured ──
       idx_featured_label: "FEATURED GAME",
-      idx_feature_body: "Start from the bottom. Fight for a place in the lineup. Every match, every decision — played with cards. Build a career across 15 countries and 691 teams. Find love. Handle the media. Survive the lower leagues.",
+      idx_feature_body: "Start from the bottom. Fight for a place in the lineup. Every match, every decision — played with cards. Build a career across 15 countries and 764 teams. Find love. Handle the media. Survive the lower leagues.",
       idx_fl_1: "Card-based match decisions",
-      idx_fl_2: "15 countries · 691 teams",
+      idx_fl_2: "15 countries · 764 teams",
       idx_fl_3: "Career RPG with life events",
       idx_fl_4: "8 languages supported",
 
@@ -66,12 +66,12 @@
       gstat_downloads_l: "Downloads",
       db_about_label: "ABOUT THE GAME",
       db_about_1: "Start from the bottom. Fight for a place in the lineup. Every match, every decision — played with cards. DeckBall is a football career RPG where strategy happens before the whistle blows.",
-      db_about_2: "Build a career spanning 15 countries and 691 real-world clubs. Navigate transfer windows, media pressure, and life events off the pitch. Find love. Handle rivals. Survive the lower leagues and rise to the top.",
+      db_about_2: "Build a career spanning 15 countries and 764 real-world clubs. Navigate transfer windows, media pressure, and life events off the pitch. Find love. Handle rivals. Survive the lower leagues and rise to the top.",
       db_about_3: "Every card you play is a decision. Every decision shapes your legacy.",
       gfeat1_label: "Card-Based Matches",
       gfeat1_desc: "Strategic decisions on every play",
       gfeat2_label: "15 Countries",
-      gfeat2_desc: "691 real clubs to sign for",
+      gfeat2_desc: "764 real clubs to sign for",
       gfeat3_label: "Career RPG",
       gfeat3_desc: "Life events beyond the pitch",
       gfeat4_label: "8 Languages",
@@ -143,9 +143,9 @@
 
       // ── index: featured ──
       idx_featured_label: "ÖNE ÇIKAN OYUN",
-      idx_feature_body: "En alttan başla. İlk 11'de yer kapmak için savaş. Her maç, her karar — kartlarla oynanır. 15 ülke ve 691 takım arasında bir kariyer kur. Aşkı bul. Medyayla başa çık. Alt liglerde hayatta kal.",
+      idx_feature_body: "En alttan başla. İlk 11'de yer kapmak için savaş. Her maç, her karar — kartlarla oynanır. 15 ülke ve 764 takım arasında bir kariyer kur. Aşkı bul. Medyayla başa çık. Alt liglerde hayatta kal.",
       idx_fl_1: "Kart tabanlı maç kararları",
-      idx_fl_2: "15 ülke · 691 takım",
+      idx_fl_2: "15 ülke · 764 takım",
       idx_fl_3: "Yaşam olaylı kariyer RPG'si",
       idx_fl_4: "8 dil desteği",
 
@@ -174,12 +174,12 @@
       gstat_downloads_l: "İndirme",
       db_about_label: "OYUN HAKKINDA",
       db_about_1: "En alttan başla. İlk 11'de yer kapmak için savaş. Her maç, her karar — kartlarla oynanır. DeckBall, stratejinin düdük çalmadan önce yaşandığı bir futbol kariyer RPG'sidir.",
-      db_about_2: "15 ülke ve 691 gerçek kulüp boyunca bir kariyer kur. Transfer dönemlerini, medya baskısını ve saha dışındaki yaşam olaylarını yönet. Aşkı bul. Rakiplerle başa çık. Alt liglerde hayatta kal ve zirveye çık.",
+      db_about_2: "15 ülke ve 764 gerçek kulüp boyunca bir kariyer kur. Transfer dönemlerini, medya baskısını ve saha dışındaki yaşam olaylarını yönet. Aşkı bul. Rakiplerle başa çık. Alt liglerde hayatta kal ve zirveye çık.",
       db_about_3: "Oynadığın her kart bir karardır. Her karar mirasını şekillendirir.",
       gfeat1_label: "Kart Tabanlı Maçlar",
       gfeat1_desc: "Her pozisyonda stratejik kararlar",
       gfeat2_label: "15 Ülke",
-      gfeat2_desc: "İmza atılacak 691 gerçek kulüp",
+      gfeat2_desc: "İmza atılacak 764 gerçek kulüp",
       gfeat3_label: "Kariyer RPG",
       gfeat3_desc: "Saha dışında yaşam olayları",
       gfeat4_label: "8 Dil",
