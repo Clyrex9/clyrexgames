@@ -1,0 +1,12 @@
+{
+  "name": "clyrexgames-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clyrex Games website + DeckBall store Netlify functions",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0"
+  }
+}

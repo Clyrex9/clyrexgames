@@ -94,6 +94,18 @@ googleBtn.addEventListener("click", async () => {
       idInput.value = uid;
       refreshIdStatus();
       googleLbl.textContent = "✓ ID dolduruldu (" + (result.user.email || "Google") + ")";
+
+      // Oyuncu profilini sunucuda oluştur/güncelle (oyunda da görünür olsun).
+      // ID token'ı backend doğrular; başarısız olsa bile satın alma engellenmez.
+      try {
+        const idToken = await result.user.getIdToken();
+        await fetch("/.netlify/functions/ensure-profile", {
+          method: "POST",
+          headers: { Authorization: "Bearer " + idToken },
+        });
+      } catch (e) {
+        console.warn("[Store] profil senkronu atlandı:", e);
+      }
     } else {
       googleLbl.textContent = "Giriş yapılamadı — ID'yi elle yapıştır";
       googleBtn.disabled = false;

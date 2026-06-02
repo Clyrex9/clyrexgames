@@ -14,3 +14,10 @@ desktop.ini
 # Temp
 *.tmp
 *.bak
+
+# Node / Netlify
+node_modules/
+.netlify/
+.env
+.env.*
+!.env.example
