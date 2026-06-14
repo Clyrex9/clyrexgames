@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeckBall v3.8 — Devlog — Clyrex Games</title>
+  <meta name="description" content="DeckBall v3.8: a two-track Season Pass, a new Cosmetics tab, National Team & World Cup mode, an Xsolla web shop, 20+ new nationalities, and the fix for the infamous 0% success-chance bug.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <meta property="og:title" content="DeckBall v3.8 Devlog — Clyrex Games">
+  <meta property="og:description" content="Season Pass & National Team Update. Two-track progression, cosmetics, World Cup mode, an Xsolla web shop, and the fix for the infamous 0% success-chance bug.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Clyrex Games">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP3QK9B61D"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">CLYREX</a>
+    <div class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#studio">Studio</a>
+      <a href="/devlog" class="nav-active">Devlog</a>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-breadcrumb reveal">
+        <a href="/devlog">← Devlog</a>
+        <span class="post-breadcrumb-sep">/</span>
+        <span>DeckBall v3.8</span>
+      </div>
+
+      <div class="post-meta-row reveal">
+        <span class="dlog-game-tag">DeckBall</span>
+        <span class="dlog-version">v3.8</span>
+        <span class="dlog-tag">Major Release</span>
+        <time class="dlog-date" datetime="2026-06-14">June 14, 2026</time>
+      </div>
+
+      <h1 class="post-title reveal">Season Pass &amp;<br>National Team</h1>
+      <p class="post-sub reveal">34 commits, +20,851 lines. v3.7 turned DeckBall into a footballer life sim. v3.8 gives that life progression and identity — a Season Pass that banks every match, cosmetics you actually earn, a road to the World Cup, and the fix for the one bug that made players feel cheated.</p>
+
+      <div class="post-commit-range reveal">
+        <span class="post-commit-label">Commits</span>
+        <code class="post-commit">bdd4ee1 → 265d67d</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="post-body-section">
+    <div class="post-body-inner">
+
+      <!-- Intro -->
+      <div class="post-chapter reveal">
+        <p class="post-p">
+          In v3.7 we pushed DeckBall past the pitch — a dating app, NPCs with opinions, a career with a
+          beginning and an end. v3.8 takes that life and gives it two things it was missing: a sense of
+          progression, and a sense of identity. Now every match and every training session banks onto a
+          track, and the rewards you unlock are yours to wear.
+        </p>
+      </div>
+
+      <!-- Major Features -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Major Features</div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">01</span>
+            <h2 class="post-feature-title">Season Pass</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            The headline of v3.8. Two tracks — Free and Premium — running side by side, with persistent,
+            global progression that carries across your whole career. Every level is 150 XP, VIP players
+            get an XP multiplier, and each tier unlocks a cosmetic reward. Your matches and training finally
+            add up to something you can see.
+          </p>
+          <ul class="post-list">
+            <li>Two tracks: Free and Premium</li>
+            <li>Persistent, global progression — 150 XP per level</li>
+            <li>VIP XP multiplier</li>
+            <li>Cosmetic rewards unlocked at every tier</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">02</span>
+            <h2 class="post-feature-title">Cosmetics</h2>
+            <span class="post-feature-tag">New Tab</span>
+          </div>
+          <p class="post-p">
+            A brand-new Cosmetics tab where you equip everything you earn from the Season Pass. Profile frames
+            (bronze, silver, gold), player kits, goal celebrations (a wave, a backflip, a robot dance), and
+            card backs (blue, synthwave neon, legendary gold). When you score, do you backflip or break into
+            the robot? That's your call now.
+          </p>
+          <ul class="post-list">
+            <li>Profile frames — bronze / silver / gold</li>
+            <li>Player kits and card backs (blue / synthwave neon / legendary gold)</li>
+            <li>Goal celebrations: wave / backflip / robot dance</li>
+            <li>Unlock from the Season Pass, equip from the new tab</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">03</span>
+            <h2 class="post-feature-title">National Team &amp; World Cup</h2>
+            <span class="post-feature-tag">New Content</span>
+          </div>
+          <p class="post-p">
+            Midway through a career, an invitation arrives at your door — represent your country at the World
+            Cup, or stay focused on your club. We added group-stage mechanics and refreshed national-team
+            strengths so the world map feels alive. And one important rule: in a national match, your club
+            manager's trust no longer applies, so you start on merit.
+          </p>
+          <ul class="post-list">
+            <li>Mid-career national team invitations (accept / focus on club)</li>
+            <li>World Cup group-stage mechanics</li>
+            <li>Updated national team strengths</li>
+            <li>Club-manager trust no longer benches you in national matches</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">04</span>
+            <h2 class="post-feature-title">Web Shop (Xsolla)</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            You can now buy gems and subscriptions straight from the website, powered by Xsolla. Purchases are
+            matched back to your account securely through a neutral in-game Player ID — no login sharing, no
+            guesswork. Behind it sits a Cloud Function webhook that delivers what you bought directly into your
+            game.
+          </p>
+          <ul class="post-list">
+            <li>Gems and subscriptions purchasable from the web</li>
+            <li>Secure matching via a neutral in-game Player ID</li>
+            <li>Cloud Function webhook for delivery</li>
+            <li>End-of-match ad and an in-app review prompt</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Content Expansion -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Content Expansion</div>
+
+        <div class="post-improvements-grid">
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">20+ New Nationalities</h3>
+            <p class="post-impr-body">
+              Canada, Japan, South Korea, Nigeria, Senegal, Croatia, Ukraine and more — over 20 new
+              nationalities, fully integrated into character creation.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Marriage &amp; Dating</h3>
+            <p class="post-impr-body">
+              The marriage and dating flow got a major expansion — dozens of new activities and dialogues,
+              localised across all 8 languages.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Lifestyle Bonuses</h3>
+            <p class="post-impr-body">
+              Lifestyle items now pay out weekly passive bonuses — income and morale that tick along in the
+              background of your career.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Events &amp; Card Pool</h3>
+            <p class="post-impr-body">
+              The event system and card pool were reworked and grown, with new pre-match atmosphere commentary
+              to set the scene before kickoff.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Key Fixes -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Key Fixes</div>
+        <p class="post-p">
+          The thing we're proudest of in v3.8 isn't a feature — it's trust. We tore out the infamous
+          <strong>&ldquo;0% success chance&rdquo;</strong> bug at the root: the one where you'd see 91% on the
+          selection screen and then 0% on the result. The percentage you see is now exactly the dice's real
+          odds, and every hidden bonus — synergy, combo, cleats, captain, marriage — is transparent on the
+          selection screen too.
+        </p>
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>0% success chance — fixed</strong> — the most perception-breaking bug in the game.
+            Displayed odds now equal real odds, with all bonuses shown up front.
+          </li>
+          <li>
+            <strong>&ldquo;Türkiye → turkey&rdquo;</strong> — fixed the embarrassing mistranslation
+            (German / Spanish / Italian / Portuguese) and scrubbed stray Turkish text that had leaked into
+            other languages. 🦃→🇹🇷
+          </li>
+          <li>
+            <strong>National-match starting XI</strong> — fixed accidentally starting on the bench; club
+            manager trust no longer carries into national matches.
+          </li>
+          <li>
+            <strong>Cup &amp; Season Pass math</strong> — fixed a cup fixture bug, the Season Pass max-level
+            percentage calculation, and version sync.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Polish -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Polish</div>
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Single colour-palette discipline</strong> — 39 raw colours bound to tokens, with a
+            unifying night overlay across the hub cards.
+          </li>
+          <li>
+            <strong>Header indicators</strong> — a Season Pass badge, gem count, and pending-reward indicator,
+            plus a localised HOME/AWAY badge.
+          </li>
+          <li>
+            <strong>100% translation coverage</strong> — all 8 languages fully synced across 1,582 keys.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Next -->
+      <div class="post-chapter post-chapter--last reveal">
+        <div class="post-chapter-label">What's Next</div>
+        <p class="post-p">
+          Next up: smaller visual polish (page backgrounds) and more content on top of the systems v3.8
+          just laid down. With the Season Pass, cosmetics, and the national-team road now in place, there's a
+          lot of room to keep building identity into a career.
+        </p>
+        <p class="post-p">
+          If you're jumping into v3.8, take the World Cup invitation when it lands — and check the selection
+          screen. That percentage finally tells the truth.
+        </p>
+        <div class="post-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+            </svg>
+            Play DeckBall v3.8
+          </a>
+          <a href="/devlog" class="btn-ghost">← All Devlogs</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="devlog-cta-banner">
+    <div class="devlog-cta-inner">
+      <div class="devlog-cta-text">
+        <span class="devlog-cta-eyebrow">Available now on Android</span>
+        <h2 class="devlog-cta-heading">Ready to build your career?</h2>
+        <p class="devlog-cta-sub">15 countries. 764 clubs. A full life on and off the pitch. Free to download.</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+         class="devlog-cta-btn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+        </svg>
+        Download on Google Play
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">CLYREX GAMES</span>
+        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="https://play.google.com/store/search?q=clyrex&c=apps"
+           target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
