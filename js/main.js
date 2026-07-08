@@ -37,3 +37,23 @@ document.querySelectorAll('.phone-img').forEach((img) => {
     this.style.display = 'none';
   });
 });
+
+// Devlog game filter tabs (devlog.html only)
+const devlogFilter = document.querySelector('.devlog-filter');
+if (devlogFilter) {
+  const filterBtns = devlogFilter.querySelectorAll('.devlog-filter-btn');
+  const devlogCards = document.querySelectorAll('.dlog-card[data-game]');
+  const archiveNote = document.querySelector('.devlog-archive-note');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const game = btn.dataset.game;
+      filterBtns.forEach((b) => b.classList.toggle('is-active', b === btn));
+      devlogCards.forEach((card) => {
+        card.style.display = game === 'all' || card.dataset.game === game ? '' : 'none';
+      });
+      // The archive note is about DeckBall's early patch notes — hide it on the Synapse tab
+      if (archiveNote) archiveNote.style.display = game === 'synapse' ? 'none' : '';
+    });
+  });
+}

@@ -52,12 +52,18 @@
 
   <!-- ENTRIES -->
   <section class="devlog-list">
+    <div class="devlog-filter" role="tablist" aria-label="Filter devlogs by game">
+      <button class="devlog-filter-btn is-active" data-game="all" type="button">All</button>
+      <button class="devlog-filter-btn" data-game="deckball" type="button">DeckBall</button>
+      <button class="devlog-filter-btn" data-game="synapse" type="button">Synapse</button>
+    </div>
+
     <p class="devlog-archive-note">Earlier DeckBall versions were released as patch notes on Google Play. DeckBall devlog entries start from v3.6.</p>
 
     <div class="devlog-entries">
 
       <!-- Synapse Beta #01 -->
-      <article class="dlog-card reveal">
+      <article class="dlog-card reveal" data-game="synapse">
         <div class="dlog-card-left">
           <span class="dlog-game-tag dlog-game-tag--synapse">Synapse</span>
           <time class="dlog-date" datetime="2026-07-09">July 9, 2026</time>
@@ -87,7 +93,7 @@
       </article>
 
       <!-- v3.8 -->
-      <article class="dlog-card reveal">
+      <article class="dlog-card reveal" data-game="deckball">
         <div class="dlog-card-left">
           <span class="dlog-game-tag">DeckBall</span>
           <time class="dlog-date" datetime="2026-06-14">June 14, 2026</time>
@@ -118,7 +124,7 @@
       </article>
 
       <!-- v3.7 -->
-      <article class="dlog-card reveal">
+      <article class="dlog-card reveal" data-game="deckball">
         <div class="dlog-card-left">
           <span class="dlog-game-tag">DeckBall</span>
           <time class="dlog-date" datetime="2026-05-31">May 31, 2026</time>
@@ -148,7 +154,7 @@
       </article>
 
       <!-- v3.6 -->
-      <article class="dlog-card reveal">
+      <article class="dlog-card reveal" data-game="deckball">
         <div class="dlog-card-left">
           <span class="dlog-game-tag">DeckBall</span>
           <time class="dlog-date" datetime="2026-05-22">May 22, 2026</time>

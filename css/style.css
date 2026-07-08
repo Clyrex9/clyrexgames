@@ -1323,6 +1323,8 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 0;
+  /* border lives on the container so it survives when the first card is filtered out */
+  border-top: 1px solid var(--border);
 }
 
 .dlog-card {
@@ -1335,6 +1337,45 @@ body::after {
   transition: background 0.2s;
 }
 
+.devlog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  max-width: var(--max);
+  margin: 0 auto 2rem;
+}
+
+.devlog-filter-btn {
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-family: var(--font-d);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.devlog-filter-btn:hover {
+  color: var(--text);
+  border-color: var(--text3);
+}
+
+.devlog-filter-btn.is-active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.devlog-filter-btn.is-active[data-game="synapse"] {
+  background: #7c4dff;
+  border-color: #7c4dff;
+}
+
 .devlog-archive-note {
   font-size: 0.78rem;
   color: var(--text3);
@@ -1342,10 +1383,6 @@ body::after {
   max-width: var(--max);
   margin-left: auto;
   margin-right: auto;
-}
-
-.dlog-card:first-child {
-  border-top: 1px solid var(--border);
 }
 
 .dlog-card-left {
