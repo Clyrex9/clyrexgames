@@ -19,8 +19,8 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
 // Image fallbacks (moved from inline onerror to avoid CSP issues)
-const fallbackEmoji = { db: '⚽', mct: '💰' };
-const fallbackClass = { db: 'db-fallback', mct: 'mct-fallback' };
+const fallbackEmoji = { db: '⚽', mct: '💰', syn: '✦' };
+const fallbackClass = { db: 'db-fallback', mct: 'mct-fallback', syn: 'syn-fallback' };
 
 document.querySelectorAll('img[data-fallback]').forEach((img) => {
   img.addEventListener('error', function () {

@@ -51,6 +51,11 @@
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
       idx_mct_desc: "Tap your way to millions. Upgrade your empire, claim daily rewards, unlock achievements, and become a money tycoon.",
+      badge_soon: "Coming Soon",
+      syn_genre: "Interactive Fiction · AI",
+      idx_syn_desc: "Chat with AI characters and live out interactive stories. Create your own characters, share them with the community, and shape every story with your choices.",
+      syn_status: "In closed beta on Google Play",
+      devlog_link: "Devlog →",
 
       // ── index: studio ──
       idx_studio_label: "STUDIO",
@@ -163,6 +168,11 @@
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
       idx_mct_desc: "Dokunarak milyonlara ulaş. İmparatorluğunu büyüt, günlük ödülleri topla, başarımları aç ve para tycoon'u ol.",
+      badge_soon: "Çok Yakında",
+      syn_genre: "İnteraktif Kurgu · Yapay Zekâ",
+      idx_syn_desc: "Yapay zekâ karakterleriyle sohbet et, interaktif hikâyeler yaşa. Kendi karakterlerini yarat, toplulukla paylaş ve her hikâyeyi seçimlerinle şekillendir.",
+      syn_status: "Google Play'de kapalı beta",
+      devlog_link: "Devlog →",
 
       // ── index: studio ──
       idx_studio_label: "STÜDYO",

@@ -611,7 +611,8 @@ body::after {
 
 .gcard:hover { background: var(--surface2); }
 
-.gcard:first-child { border-right: 1px solid var(--border); }
+.gcard:nth-child(odd) { border-right: 1px solid var(--border); }
+.gcard:nth-child(n+3) { border-top: 1px solid var(--border); }
 
 .gcard-top {
   position: relative;
@@ -640,6 +641,7 @@ body::after {
 
 .db-fallback  { background: #0d1f2d; }
 .mct-fallback { background: #0d1a0a; }
+.syn-fallback { background: #16102a; }
 
 .gcard-badge {
   position: absolute;
@@ -655,6 +657,8 @@ body::after {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.gcard-badge--soon { background: #7c4dff; }
 
 .gcard-body { flex: 1; display: flex; flex-direction: column; gap: 0.6rem; }
 
@@ -854,10 +858,9 @@ body::after {
     grid-template-columns: 1fr;
   }
 
-  .gcard:first-child {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+  .gcard:nth-child(odd) { border-right: none; }
+  .gcard:nth-child(n+3) { border-top: none; }
+  .gcard:not(:last-child) { border-bottom: 1px solid var(--border); }
 
   .studio-grid {
     grid-template-columns: 1fr;
@@ -1360,6 +1363,8 @@ body::after {
   font-weight: 600;
   font-family: var(--font-d);
 }
+
+.dlog-game-tag--synapse { color: #9b7bff; }
 
 .dlog-date {
   font-size: 0.72rem;
