@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse Beta #02 — Devlog — Clyrex Games</title>
+  <meta name="description" content="Synapse Beta #02: full English localization, an affection system that tracks how characters feel about you, an AI draft generator for creators, story finales, and a big layer of polish.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <meta property="og:title" content="Synapse Speaks English — Devlog — Clyrex Games">
+  <meta property="og:description" content="Beta #02: full English localization, an affection system, an AI draft generator, story finales, and a big layer of polish.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Clyrex Games">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP3QK9B61D"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">CLYREX</a>
+    <div class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#studio">Studio</a>
+      <a href="/devlog" class="nav-active">Devlog</a>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-breadcrumb reveal">
+        <a href="/devlog">← Devlog</a>
+        <span class="post-breadcrumb-sep">/</span>
+        <span>Synapse Beta #02</span>
+      </div>
+
+      <div class="post-meta-row reveal">
+        <span class="dlog-game-tag dlog-game-tag--synapse">Synapse</span>
+        <span class="dlog-version">Beta #02</span>
+        <span class="dlog-tag">Beta Update</span>
+        <time class="dlog-date" datetime="2026-07-12">July 12, 2026</time>
+      </div>
+
+      <h1 class="post-title reveal">Synapse Speaks English</h1>
+      <p class="post-sub reveal">Three days after the announcement, the biggest beta build yet. Synapse is
+        now fully bilingual, characters keep track of how they feel about you, creators get an AI co-writer,
+        and stories finally know how to end.</p>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="post-body-section">
+    <div class="post-body-inner">
+
+      <!-- Intro -->
+      <div class="post-chapter reveal">
+        <p class="post-p">
+          The closed beta is doing exactly what a closed beta should: testers write, things break, we fix
+          them, and somewhere along the way the app grows a feature we didn't plan for. This build is the
+          sum of that first week — one headline feature we always wanted (English), one we discovered we
+          needed (affection), and a thick coat of polish over everything in between.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">What's New</div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">01</span>
+            <h2 class="post-feature-title">Full English Localization</h2>
+            <span class="post-feature-tag">Headline</span>
+          </div>
+          <p class="post-p">
+            Synapse launched Turkish-first. As of this build, the entire app speaks English too — every
+            screen, every button, every accessibility label. The app picks your device language on first
+            launch, and you can switch anytime from your profile. And this isn't just a translated UI:
+            the AI itself is bilingual. Characters greet, flirt, and argue as native speakers in either
+            language, not through translated prompts.
+          </p>
+          <ul class="post-list">
+            <li>Complete Turkish + English interface, auto-detected from your device</li>
+            <li>Stories and characters carry a language badge, and feeds filter to your language</li>
+            <li>Bilingual AI prompts — characters write natively, not in translation</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">02</span>
+            <h2 class="post-feature-title">The Affection System</h2>
+            <span class="post-feature-tag">Core Loop</span>
+          </div>
+          <p class="post-p">
+            Characters now remember how they feel about you. Every character in a story carries an
+            affection score from 0 to 100, and it moves with the conversation — a kind word, a betrayal,
+            a confession, all of it lands somewhere. Hit a milestone and the story acknowledges it.
+            Because the score is recomputed from the conversation itself, undoing or regenerating a
+            message keeps the relationship perfectly consistent.
+          </p>
+          <ul class="post-list">
+            <li>Per-character relationship scores that react to what you actually say</li>
+            <li>Milestones that the story acknowledges as bonds deepen (or collapse)</li>
+            <li>Fully consistent with undo and regenerate — no drifting counters</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">03</span>
+            <h2 class="post-feature-title">AI Draft Generator</h2>
+            <span class="post-feature-tag">Creator Tools</span>
+          </div>
+          <p class="post-p">
+            The blank page is the hardest part of creating. The Create screen now has an AI co-writer:
+            give it a spark of an idea and it drafts a character or story for you — name, personality,
+            opening scene, the works — in your language. Everything it writes is a starting point you
+            can edit, not a finished product. Publishing still goes through moderation, and guests are
+            now clearly warned that they need an account to publish.
+          </p>
+          <ul class="post-list">
+            <li>One-tap character and story drafts from a short idea</li>
+            <li>Language-aware — drafts come out in Turkish or English to match</li>
+            <li>Guest-mode safeguards: anonymous publishing is off</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">04</span>
+            <h2 class="post-feature-title">Stories That Know How to End</h2>
+            <span class="post-feature-tag">Storytelling</span>
+          </div>
+          <p class="post-p">
+            Endings matter. Stories now build to a proper finale, presented with its own typing animation
+            instead of just stopping mid-scene. Opening scenes are generated to set the stage before you
+            type a word, and the first turns of every conversation get a quality boost from our model
+            selection logic — first impressions are when it counts most.
+          </p>
+          <ul class="post-list">
+            <li>Proper story finales with a dedicated reveal</li>
+            <li>Generated opening scenes that set the stage</li>
+            <li>Smarter model selection with a quality boost on early turns</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">05</span>
+            <h2 class="post-feature-title">Polish, Everywhere</h2>
+            <span class="post-feature-tag">UX</span>
+          </div>
+          <p class="post-p">
+            A hundred small things that add up. The app now boots behind a theater-curtain loading veil
+            with rotating backstage one-liners. Likes burst into a little heart spark. Cards show
+            community rankings, section lists can be sorted, and a leaderboard surfaces the most-loved
+            stories and creators. Moderators got real tools too — comment deletion and content removal
+            are live.
+          </p>
+          <ul class="post-list">
+            <li>New loading veil, like animations, cast avatars, and typing flavor text</li>
+            <li>Rankings on cards, sortable lists, and a community leaderboard</li>
+            <li>Moderator tools: comment deletion and content removal</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Beta status -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Where It Stands</div>
+        <p class="post-p">
+          This build is rolling out to closed beta testers on Google Play now. The 14-day closed test
+          window Google requires is ticking, and every update between now and launch lands with the
+          testers first.
+        </p>
+        <p class="post-p">
+          Want in? Send a quick email to
+          <a href="mailto:clyrex9@gmail.com?subject=Synapse%20Beta">clyrex9@gmail.com</a> with the Google
+          account you use on the Play Store, and we'll add you to the beta list.
+        </p>
+      </div>
+
+      <!-- Next -->
+      <div class="post-chapter post-chapter--last reveal">
+        <div class="post-chapter-label">What's Next</div>
+        <p class="post-p">
+          The road to public launch is unchanged: credit purchases, push notifications, and the last
+          round of backend hardening. With English support in, the launch audience just got a lot
+          bigger — and the closed beta is where we make sure both languages feel equally at home.
+        </p>
+        <div class="post-cta">
+          <a href="mailto:clyrex9@gmail.com?subject=Synapse%20Beta" class="btn-primary">
+            Join the Closed Beta
+          </a>
+          <a href="/devlog" class="btn-ghost">← All Devlogs</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BETA CTA -->
+  <section class="devlog-cta-banner">
+    <div class="devlog-cta-inner">
+      <div class="devlog-cta-text">
+        <span class="devlog-cta-eyebrow">Now in closed beta on Android</span>
+        <h2 class="devlog-cta-heading">Want early access?</h2>
+        <p class="devlog-cta-sub">Email us with your Play Store account and we'll add you to the tester list.</p>
+      </div>
+      <a href="mailto:clyrex9@gmail.com?subject=Synapse%20Beta" class="devlog-cta-btn">
+        Join the Beta
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">CLYREX GAMES</span>
+        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="https://play.google.com/store/search?q=clyrex&c=apps"
+           target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="/synapse-privacy">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
