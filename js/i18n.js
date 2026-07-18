@@ -22,7 +22,7 @@
 
       // ── Ortak ──
       tag_football_cardrpg: "Football · Card RPG",
-      reviews_39: "55 reviews",
+      reviews_39: "94 reviews",
       db_subtitle: "Football Card RPG",
       btn_googleplay: "Get on Google Play",
 
@@ -46,7 +46,7 @@
       badge_new: "New",
       idx_db_desc: "Build your football career from the bottom up. Strategic card-based matches, team management, and a life beyond the pitch.",
       downloads_3k: "3K+ downloads",
-      downloads_5k: "5K+ downloads",
+      downloads_5k: "10K+ downloads",
       detail_link: "Details →",
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
@@ -139,7 +139,7 @@
 
       // ── Ortak ──
       tag_football_cardrpg: "Futbol · Kart RPG",
-      reviews_39: "55 yorum",
+      reviews_39: "94 yorum",
       db_subtitle: "Futbol Kart RPG",
       btn_googleplay: "Google Play'den İndir",
 
@@ -163,7 +163,7 @@
       badge_new: "Yeni",
       idx_db_desc: "Futbol kariyerini en alttan zirveye kur. Stratejik kart tabanlı maçlar, takım yönetimi ve saha dışında bir hayat.",
       downloads_3k: "3B+ indirme",
-      downloads_5k: "5B+ indirme",
+      downloads_5k: "10B+ indirme",
       detail_link: "Detaylar →",
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
