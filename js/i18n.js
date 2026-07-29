@@ -23,6 +23,7 @@
       // ── Ortak ──
       tag_football_cardrpg: "Football · Card RPG",
       reviews_39: "94 reviews",
+      reviews_word: "reviews",
       db_subtitle: "Football Card RPG",
       btn_googleplay: "Get on Google Play",
 
@@ -140,6 +141,7 @@
       // ── Ortak ──
       tag_football_cardrpg: "Futbol · Kart RPG",
       reviews_39: "94 yorum",
+      reviews_word: "yorum",
       db_subtitle: "Futbol Kart RPG",
       btn_googleplay: "Google Play'den İndir",
 
