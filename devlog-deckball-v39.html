@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeckBall v3.9 — Devlog — Clyrex Games</title>
+  <meta name="description" content="DeckBall v3.9: a full Goalkeeper career with 8 keeper-only cards and 3 archetypes, reworked performance-based transfers, deeper relationships, and a stability pass that killed the marriage-event crash and a major memory leak.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <meta property="og:title" content="DeckBall v3.9 Devlog — Clyrex Games">
+  <meta property="og:description" content="Goalkeeper Mode & Stability Update. Play a whole new position, reworked transfers, deeper relationships — and the fix for the marriage-event crash and the memory bloat behind it.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Clyrex Games">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP3QK9B61D"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">CLYREX</a>
+    <div class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#studio">Studio</a>
+      <a href="/devlog" class="nav-active">Devlog</a>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-breadcrumb reveal">
+        <a href="/devlog">← Devlog</a>
+        <span class="post-breadcrumb-sep">/</span>
+        <span>DeckBall v3.9</span>
+      </div>
+
+      <div class="post-meta-row reveal">
+        <span class="dlog-game-tag">DeckBall</span>
+        <span class="dlog-version">v3.9</span>
+        <span class="dlog-tag">Major Release</span>
+        <time class="dlog-date" datetime="2026-07-28">July 28, 2026</time>
+      </div>
+
+      <h1 class="post-title reveal">Goalkeeper Mode &amp;<br>Stability</h1>
+      <p class="post-sub reveal">34 commits, +11,447 lines. v3.8 gave your career progression and identity. v3.9 lets you play a whole new position — in goal — while quietly tearing out the crashes and memory bloat that were costing real players their game.</p>
+
+      <div class="post-commit-range reveal">
+        <span class="post-commit-label">Commits</span>
+        <code class="post-commit">ec2fe59 → b0458b9</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST BODY -->
+  <section class="post-body-section">
+    <div class="post-body-inner">
+
+      <!-- Intro -->
+      <div class="post-chapter reveal">
+        <p class="post-p">
+          v3.9 carries two things at once. On one side, the most-requested feature in DeckBall's history —
+          a real goalkeeper career — plus reworked transfers and a much deeper relationship system. On the
+          other, a stability pass driven straight off the Play Console crash dashboard and player reviews:
+          a crash that hit every married player, a memory leak that took out older phones, and the
+          repetition that made long careers feel samey. Both packages ship together.
+        </p>
+      </div>
+
+      <!-- Major Features -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Major Features</div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">01</span>
+            <h2 class="post-feature-title">Goalkeeper Mode</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            The headline of v3.9, and the feature players asked for most. Pick goalkeeper at character
+            creation and the whole game reshapes around the position. Keepers never step into attacking
+            moments — they play through their own match scenes: a reflex save, a penalty stop, sweeping
+            behind the line and organising the defence, all narrated in 8 languages. Three archetypes give
+            it range: the Wall (reflexes), the Sweeper-Keeper (playing out from the back), and the Commander
+            (marshalling the defence).
+          </p>
+          <ul class="post-list">
+            <li>8 goalkeeper-only cards — diving save, punch clear, claiming crosses, marshalling the wall, quick distribution, sweeping, penalty reading (3 in the starting deck, 5 in the shop)</li>
+            <li>3 archetypes: Wall / Sweeper-Keeper / Commander — incompatible field-player builds simply can't be created</li>
+            <li>Saves and clean sheets tracked as real stats — the career screen shows those instead of goals &amp; assists</li>
+            <li>Stats read in a keeper's own language: Reflexes, Leadership, Playmaking, Long Kick, Footwork</li>
+            <li>Dedicated keeper art — 3 match scenes and a keeper profile photo, so you're never shown as an outfield player</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">02</span>
+            <h2 class="post-feature-title">Fairness for Keepers</h2>
+            <span class="post-feature-tag">Deep Fix</span>
+          </div>
+          <p class="post-p">
+            Adding a position is easy; making it play fair is the hard part. Two old systems quietly punished
+            goalkeepers, and both got fixed. Keeper decks never touched shooting or dribbling, so those
+            training weeks were wasted — we added a "Long Goal Kick" (shot) and "Footwork" (dribble) card so
+            all five stats matter. And transfer reputation used to be a flat average of five stats, so a
+            keeper who trained reflexes correctly looked mediocre and never got the big offer. Now a keeper's
+            reputation weights the stats they actually use, and their CV is read through saves and clean
+            sheets.
+          </p>
+          <ul class="post-list">
+            <li>No more dead stats — every one of the five now feeds a card a keeper can play</li>
+            <li>Transfer reputation weighted to the position, not a flat average</li>
+            <li>Star Season bonus finally reachable for keepers, read off save performance</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">03</span>
+            <h2 class="post-feature-title">Reworked Transfers</h2>
+            <span class="post-feature-tag">New System</span>
+          </div>
+          <p class="post-p">
+            Offers no longer look only at your stat average — they read your <em>season</em>. Goal and assist
+            contribution now earns a reputation bonus that flows into every offer filter. And a new Star
+            Season rule rewards a breakout: average 0.8+ contributions per match and you're guaranteed a
+            monster offer from the five strongest prestige clubs you can realistically reach. Have the season
+            of your life and the game finally treats you like it.
+          </p>
+          <ul class="post-list">
+            <li>Offers weigh season performance, not just raw stats</li>
+            <li>Star Season: 0.8+ contributions/match → a guaranteed top-club offer</li>
+            <li>Wage protection after a breakout season</li>
+          </ul>
+        </div>
+
+        <div class="post-feature">
+          <div class="post-feature-header">
+            <span class="post-feature-num">04</span>
+            <h2 class="post-feature-title">Deeper Relationships</h2>
+            <span class="post-feature-tag">New Content</span>
+          </div>
+          <p class="post-p">
+            Life off the pitch got heavier. A full cheating chain runs from a nightclub temptation to a gossip
+            photo to being caught in the headlines, with real, consequential choices at each step. A baby pack
+            adds a "spend time with the baby" activity, partner-specific responses, and story beats — a first
+            word ("Goal!"), a stadium debut, a sleepless week. A drama pack layers in 8 new relationship
+            events, and your partner now reacts in context to your injuries, your low morale, and your peak
+            form.
+          </p>
+          <ul class="post-list">
+            <li>Cheating chain: temptation → gossip photo → caught in the headlines (confess / deny / apologise / divorce)</li>
+            <li>Baby pack: new activity, partner-specific replies, and 3 baby events</li>
+            <li>Drama pack: 8 new relationship events that actually move your relationship score</li>
+            <li>Contextual chit-chat that responds to injury, morale, and form</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Critical Fixes -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Critical Crash Fixes</div>
+        <p class="post-p">
+          The thing we're proudest of in v3.9 isn't the new position — it's the crashes we killed. The worst
+          one hit <strong>every married player</strong>: six <code>marriage_crisis</code> events called a
+          translation function, but in the six non-Turkish languages the i18n module was never imported, so
+          the moment the event fired the game closed with a <code>ReferenceError</code>. It's fixed, verified
+          across all 8 languages — and we added a permanent safeguard so this whole class of bug can't ship
+          again.
+        </p>
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Marriage-event crash — fixed (B10)</strong> — the highest-impact bug in the game. Any
+            married player whose relationship score dropped hit it. All 48 events × 480 text keys now verified.
+          </li>
+          <li>
+            <strong>Indonesian crashes — fixed (B8)</strong> — training, resting and the dating app crashed
+            because several profile and event functions were never defined in the Indonesian data files.
+          </li>
+          <li>
+            <strong>Permanent safeguard</strong> — <code>dataManager</code> now falls back to English content
+            when a language is missing a function instead of crashing. This error class can't reach production again.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Memory & Performance -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Memory &amp; Performance</div>
+        <p class="post-p">
+          A cluster of <code>OutOfMemoryError</code> crashes and GC-driven ANRs was hitting roughly 70 players
+          on the Console. We went after the root causes rather than the symptoms, and the biggest win came from
+          the asset pipeline: the app was holding far more in memory than any screen ever needed.
+        </p>
+        <div class="post-improvements-grid">
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Lazy Language Loading</h3>
+            <p class="post-impr-body">
+              Only the active language is loaded into memory now, instead of all 8 at once — a large,
+              constant saving for every device.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Assets: ~158&nbsp;MB → ~49&nbsp;MB</h3>
+            <p class="post-impr-body">
+              Images are downsized on disk (cards 1254²→512², lifestyle/cleats/events ≤768px) and decoded at
+              view size on Android via <code>resizeMethod="resize"</code>.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Match Scenes</h3>
+            <p class="post-impr-body">
+              7-layer match scenes were decoding at full resolution — about 58&nbsp;MB each. Now they resolve
+              at screen size, not source size.
+            </p>
+          </div>
+
+          <div class="post-impr">
+            <h3 class="post-impr-title">Chat History Capped</h3>
+            <p class="post-impr-body">
+              Dating chat history is limited to 80 messages (save file, render and old-save repair) — an
+              unbounded log was bloating both the save and the UI. Plus <code>largeHeap</code> in the manifest.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Content & Systems -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Systems &amp; Balance</div>
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Novelty-first event engine</strong> — every event's seen-count is now saved. Unseen events
+            get 8× priority; events seen 3+ times get rarer with longer cooldowns. Measured on the real pool
+            (159 events · 300 simulated careers), first-season novelty rose 60% → 77% and the most-repeated
+            event dropped from 3.7 to 2.5 appearances. Long-career repetition is bounded by pool depth, not the
+            algorithm — expanding the unconditional pool is the v4.0 job.
+          </li>
+          <li>
+            <strong>Text variants</strong> — the same event can now arrive with different wording. First pack:
+            the 5 most-recurring events, 2 variants each, in all 8 languages.
+          </li>
+          <li>
+            <strong>Big-match pressure</strong> — card success cap against elite opponents (strength ≥85)
+            lowered 95% → 90%. Even a maxed player can now slip against the giants; normal matches keep the 95% cap.
+          </li>
+          <li>
+            <strong>Weak opponents can score</strong> — a floor was added to opponent expected goals and
+            output raised (≈0.8 in even games, ≈1.4 vs elite). The "Getafe never creates a chance" complaint is closed.
+          </li>
+          <li>
+            <strong>Faster development</strong> — the mid-band of the training curve (60–90) is 35–45% faster;
+            the 90+ zone is deliberately left slow.
+          </li>
+          <li>
+            <strong>Displayed chance = real chance (B3)</strong> — the on-screen percentage and the real dice
+            could pull from different sources mid-match; bound to a single source.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pre-release Audit & Fixes -->
+      <div class="post-chapter reveal">
+        <div class="post-chapter-label">Carried-Over Fixes &amp; Pre-Release Audit</div>
+        <ul class="post-list post-list--tech">
+          <li>
+            <strong>Trophies no longer vanish</strong> — <code>cupWonThisSeason</code> /
+            <code>europeanWonThisSeason</code> flags weren't saved, so quitting after a cup win lost it from
+            the trophy cabinet. Now persisted, along with pending penalties and the guaranteed-event counter.
+          </li>
+          <li>
+            <strong>Season no longer runs forever (B4)</strong> — stale national-team/cup weeks could extend a
+            season indefinitely; the header now shows the true total week count.
+          </li>
+          <li>
+            <strong>Purchased cleats stay bought (B5)</strong> — cleats, including gem-bought ones, were never
+            written to the save. Fixed.
+          </li>
+          <li>
+            <strong>End-of-match &amp; end-of-season summaries were Turkish in every language</strong> — those
+            fixed templates (plus embedded league names and generic European team names) are now localised to
+            all 8 languages, with the <code>undefined</code>-opponent edge case fixed.
+          </li>
+          <li>
+            <strong>Active-tab indicator fixed</strong> — the bottom bar was hard-coded to HUB, so the red mark
+            stayed on HUB even inside league, shop, team or profile. It now marks the open page.
+          </li>
+          <li>
+            <strong>Indonesian completed</strong> — 12 missing events and 11 micro-events added, ~1,200 strings
+            translated; plus a fresh sweep of hardcoded Turkish (injury names, the entire World Cup screen,
+            milestone events) that non-Turkish players were still seeing.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Next -->
+      <div class="post-chapter post-chapter--last reveal">
+        <div class="post-chapter-label">What's Next</div>
+        <p class="post-p">
+          The novelty engine made repetition fairer, but the real ceiling is pool depth: of 159 events, only 34
+          can recur unconditionally. So v4.0's headline job is widening that unconditional event pool — more
+          situations that can come round again, told more ways. On top of that, keeper-specific card art is
+          ready to swap in as soon as the assets land.
+        </p>
+        <p class="post-p">
+          If you're jumping into v3.9, try a keeper career from scratch — and if you're married, the game
+          finally won't crash on you when things get dramatic.
+        </p>
+        <div class="post-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+            </svg>
+            Play DeckBall v3.9
+          </a>
+          <a href="/devlog" class="btn-ghost">← All Devlogs</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="devlog-cta-banner">
+    <div class="devlog-cta-inner">
+      <div class="devlog-cta-text">
+        <span class="devlog-cta-eyebrow">Available now on Android</span>
+        <h2 class="devlog-cta-heading">Ready to build your career?</h2>
+        <p class="devlog-cta-sub">15 countries. 764 clubs. Now play in goal, too. A full life on and off the pitch. Free to download.</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.deckball.game"
+         class="devlog-cta-btn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M3 20.5v-17c0-.83 1.01-1.3 1.63-.8l14 8.5c.56.34.56 1.26 0 1.6l-14 8.5C3.01 21.8 3 21.33 3 20.5z"/>
+        </svg>
+        Download on Google Play
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">CLYREX GAMES</span>
+        <span class="footer-copy">© 2026 &nbsp;·&nbsp; İzmir, Turkey</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="mailto:clyrex9@gmail.com">Contact</a>
+        <a href="https://play.google.com/store/search?q=clyrex&c=apps"
+           target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
