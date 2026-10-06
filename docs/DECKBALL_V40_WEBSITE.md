@@ -23,3 +23,13 @@ The article is first in the devlog list and linked by visual callouts on the hom
 See `DECKBALL_V40_VALIDATION.json` and `previews/` for the browser checks and screenshots. The article was checked in both languages at 1365, 390 and 320 px, with the real Netlify CSP applied. Localized images decoded, metadata switched, content fit without horizontal overflow. Mock live responses updated ratings/reviews without changing publisher download counts; the devlog list filters and article navigation were checked. Existing payment pages/functions were not exercised or changed.
 
 **Not published:** no commit, push or deployment was made. No live Firebase, Play Console, YouTube or website settings were changed. Serve the project locally to navigate extensionless links; directly opening the article file can preview its text/images, while site-root links need a server.
+
+## 6 October revision
+
+The homepage and game-page callouts now use the localized horizontal cover, with an explicit automatic image height. This fixes the 170×800 px crop and keeps the announcement compact. A 320 px navigation and game-header overflow was also corrected.
+
+The article now separates eight groups of additions from refreshed existing content. The 3.9 release commit was compared against the 4.0 build; see [the content audit](DECKBALL_V40_DELTA_AUDIT.md). Current game-page statistics were aligned with the source. Goalkeeper mode, DeckTalk, marriage and children are explicitly identified as existing systems.
+
+[Revision checks](DECKBALL_V40_REVISION_VALIDATION.json): 24 page/viewport/language combinations, across 1920, 1365, 390 and 320 px. Both languages, cover proportions, teaser height, horizontal overflow and the added content were verified with the Netlify CSP.
+
+A separate real-gameplay Turkish trailer was produced in DeckBall's `marketing/4.0/video/`: 30 seconds, 1080×1920, H.264/AAC, with the game's music. It is a local MP4, not a published YouTube video.

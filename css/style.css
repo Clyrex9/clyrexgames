@@ -1189,16 +1189,16 @@ body::after {
 }
 
 /* ── DeckBall 4.0 devlog entry points ── */
-.db-v40-teaser { padding: 2.5rem var(--pad); border-bottom: 1px solid var(--border); background: linear-gradient(110deg, #181320, #111a2b); }
-.db-v40-teaser-inner { max-width: var(--max); margin: auto; display: grid; grid-template-columns: 170px 1fr; gap: 2.5rem; align-items: center; }
-.db-v40-teaser img { width: 170px; aspect-ratio: 1; border-radius: 14px; object-fit: cover; }
+.db-v40-teaser { padding: 2.5rem var(--pad); border-bottom: 1px solid var(--border); background: linear-gradient(110deg, #14121c, #101622); }
+.db-v40-teaser-inner { max-width: var(--max); margin: auto; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.db-v40-teaser img { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 500; border: 1px solid var(--border2); border-radius: 12px; object-fit: contain; }
 .db-v40-teaser span { font-size: .65rem; letter-spacing: .15em; color: #efbc75; }
 .db-v40-teaser h2 { font-family: var(--font-d); font-size: clamp(1.4rem,3vw,2rem); line-height: 1.2; letter-spacing: -.03em; margin: .7rem 0; }
 .db-v40-teaser p { font-size: .86rem; line-height: 1.8; color: #a6b4c9; max-width: 680px; }
 .db-v40-teaser a { display: inline-block; margin-top: 1rem; font-size: .8rem; color: #efbc75; font-weight: 600; }
 .dlog-v40-cover { display: block; max-width: 580px; margin: 0 0 1.25rem; }
 .dlog-v40-cover img { width: 100%; height: auto; border: 1px solid var(--border2); border-radius: 10px; }
-@media(max-width:600px) { .db-v40-teaser-inner { grid-template-columns: 90px 1fr; gap: 1.2rem; align-items: start; } .db-v40-teaser img { width: 90px; } }
+@media(max-width:600px) { .db-v40-teaser { padding-top: 1.5rem; padding-bottom: 1.5rem; } .db-v40-teaser-inner { grid-template-columns: 1fr; gap: 1.2rem; } .db-v40-teaser img { max-width: 460px; } }
 
 /* ── Privacy Policy ── */
 .policy-section {
@@ -1791,10 +1791,20 @@ body::after {
 
 @media (max-width: 600px) {
   .game-features-grid { grid-template-columns: 1fr; }
+  .game-hero-grid > * { min-width: 0; }
+  .game-stats-row { gap: clamp(.75rem, 4vw, 1.5rem); flex-wrap: wrap; }
   .icon-hero-wrap { padding: 2.5rem; }
   .icon-hero-img { width: 120px; height: 120px; }
   .post-title { font-size: clamp(2rem, 10vw, 2.75rem); }
   .devlog-title-xl { font-size: clamp(2.5rem, 12vw, 4rem); }
+}
+
+@media (max-width: 480px) {
+  .nav { gap: .75rem; }
+  .nav-logo { font-size: .8rem; letter-spacing: .07em; }
+  .nav-links { gap: .65rem; align-items: center; }
+  .nav-links a { font-size: .65rem; letter-spacing: .02em; }
+  .lang-toggle { padding: .3rem .4rem; font-size: .65rem; }
 }
 
 /* ─────────────────────────────────────────

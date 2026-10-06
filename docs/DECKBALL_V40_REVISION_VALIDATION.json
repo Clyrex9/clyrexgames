@@ -1,0 +1,150 @@
+{
+  "result": "PASS",
+  "published": false,
+  "checks": [
+    {
+      "page": "/",
+      "width": 1920,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 1920,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 1920,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 1920,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 1920,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 1920,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 1365,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 1365,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 1365,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 1365,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 1365,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 1365,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 390,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 390,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 390,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 390,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 390,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 390,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 320,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/",
+      "width": 320,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 320,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/deckball",
+      "width": 320,
+      "lang": "en",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 320,
+      "lang": "tr",
+      "pass": true
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "width": 320,
+      "lang": "en",
+      "pass": true
+    }
+  ]
+}
