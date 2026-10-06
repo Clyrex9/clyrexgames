@@ -1,0 +1,101 @@
+{
+  "completedAt": "2026-10-06T17:38:54.934Z",
+  "result": "PASS",
+  "published": false,
+  "checks": [
+    {
+      "page": "devlog-deckball-v40",
+      "width": 1365,
+      "language": "en",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "width": 1365,
+      "language": "tr",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "width": 390,
+      "language": "en",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "width": 390,
+      "language": "tr",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "width": 320,
+      "language": "en",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "width": 320,
+      "language": "tr",
+      "images": 7,
+      "localizedContent": true,
+      "publisherStats": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "/",
+      "liveRatingAndReviews": true,
+      "downloadCountUnaffected": true,
+      "language": "tr"
+    },
+    {
+      "page": "/deckball",
+      "liveRatingAndReviews": true,
+      "downloadCountUnaffected": true,
+      "language": "tr"
+    },
+    {
+      "page": "/devlog-deckball-v40",
+      "liveRatingAndReviews": true,
+      "downloadCountUnaffected": true,
+      "language": "tr"
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "partialOrInvalidLiveResponse": true,
+      "expectedRating": "4,7",
+      "expectedReviews": "123"
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "partialOrInvalidLiveResponse": true,
+      "expectedRating": "4,9",
+      "expectedReviews": "117"
+    },
+    {
+      "page": "devlog-deckball-v40",
+      "partialOrInvalidLiveResponse": true,
+      "expectedRating": "4,7",
+      "expectedReviews": "117"
+    }
+  ],
+  "devlogListingAndFilters": true,
+  "internalArticleLink": true,
+  "cspMatchesNetlify": true,
+  "imagesDecoded": true
+}

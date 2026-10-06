@@ -22,16 +22,23 @@
 
       // ── Ortak ──
       tag_football_cardrpg: "Football · Card RPG",
-      reviews_39: "94 reviews",
+      reviews_39: "117 reviews",
       reviews_word: "reviews",
       db_subtitle: "Football Card RPG",
       btn_googleplay: "Get on Google Play",
+
+      db_download_number: "14.5K",
+      studio_download_number: "18.5K+",
+      db_v40_label: "DECKBALL 4.0 · IN DEVELOPMENT",
+      db_v40_title: "A new chapter for your career.",
+      db_v40_body: "A fresh career hub, clearer cards, new stories and a closer look at the world beyond the pitch.",
+      db_v40_link: "Explore the 4.0 devlog →",
 
       // ── index: hero ──
       idx_hero_tagline: "Independent mobile games<br>built for players who want more.",
       idx_hero_scroll: "See the games",
       stat_games_l: "Games",
-      stat_downloads_l: "Downloads",
+      stat_downloads_l: "Total downloads",
       stat_rating_l: "Top Rating",
 
       // ── index: featured ──
@@ -47,7 +54,7 @@
       badge_new: "New",
       idx_db_desc: "Build your football career from the bottom up. Strategic card-based matches, team management, and a life beyond the pitch.",
       downloads_3k: "4K+ downloads",
-      downloads_5k: "12K+ downloads",
+      downloads_5k: "14.5K downloads",
       detail_link: "Details →",
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
@@ -140,16 +147,22 @@
 
       // ── Ortak ──
       tag_football_cardrpg: "Futbol · Kart RPG",
-      reviews_39: "94 yorum",
+      reviews_39: "117 yorum",
       reviews_word: "yorum",
       db_subtitle: "Futbol Kart RPG",
+      db_download_number: "14,5B",
+      studio_download_number: "18,5B+",
+      db_v40_label: "DECKBALL 4.0 · GELİŞTİRİLİYOR",
+      db_v40_title: "Kariyerine yeni bir sayfa.",
+      db_v40_body: "Yeni kariyer merkezi, daha anlaşılır kartlar, yeni hikâyeler ve saha dışındaki dünyaya daha yakından bir bakış.",
+      db_v40_link: "4.0 geliştirme günlüğünü incele →",
       btn_googleplay: "Google Play'den İndir",
 
       // ── index: hero ──
       idx_hero_tagline: "Daha fazlasını isteyen oyuncular için<br>bağımsız mobil oyunlar.",
       idx_hero_scroll: "Oyunları gör",
       stat_games_l: "Oyun",
-      stat_downloads_l: "İndirme",
+      stat_downloads_l: "Toplam indirme",
       stat_rating_l: "En Yüksek Puan",
 
       // ── index: featured ──
@@ -165,7 +178,7 @@
       badge_new: "Yeni",
       idx_db_desc: "Futbol kariyerini en alttan zirveye kur. Stratejik kart tabanlı maçlar, takım yönetimi ve saha dışında bir hayat.",
       downloads_3k: "4B+ indirme",
-      downloads_5k: "12B+ indirme",
+      downloads_5k: "14,5B indirme",
       detail_link: "Detaylar →",
       playstore_link: "Play Store ↗",
       mct_genre: "Idle · Tycoon",
