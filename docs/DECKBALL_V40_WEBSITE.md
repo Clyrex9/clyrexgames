@@ -1,6 +1,6 @@
 # DeckBall 4.0 website update
 
-6 October 2026. New bilingual development article: `devlog-deckball-v40.html`, at `/devlog-deckball-v40`. It describes the upcoming 4.0 release, not a release already available on Google Play. Previous devlogs remain an archive.
+6 October 2026. New bilingual development article: `devlog-deckball-v40.html`, at `/devlog-deckball-v40`. DeckBall 4.0 is released on Google Play, as confirmed by the publisher. The article and trailer now describe the released update. Website changes are local until deployed. Previous devlogs remain an archive.
 
 ## Article and artwork
 

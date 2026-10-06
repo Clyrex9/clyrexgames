@@ -21,4 +21,4 @@ Karşılaştırma: DeckBall `b0458b9` (29 Temmuz, 3.9 sürüm notu) → `178abbe
 
 Gerçek oyun veri yardımcılarıyla ayrıca 51 kart, 159 büyük olay, 28 başarım ve 33 seçilebilir milliyet doğrulandı. Ana oyun sayfasının eski 764 / 38 / 39 sayıları güncellendi. Kaynağı açıklanmayan 580+ olay ve 400K+ kelime pazarlama rakamları yerine doğrulanabilen 4.0 bilgileri kullanıldı.
 
-4.0 henüz Google Play'de yayımlanmış olarak gösterilmiyor. Emeklilik sonrası oyun, gerçek zamanlı fizik motoru veya kapalı sunucu cüzdan özellikleri duyuruya eklenmedi.
+Kullanıcı 4.0’ın Google Play’de yayımlandığını bildirdi; site metinleri yayın durumuna göre güncellendi. Emeklilik sonrası oyun, gerçek zamanlı fizik motoru veya kapalı sunucu cüzdan özellikleri duyuruya eklenmedi.

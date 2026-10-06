@@ -29,7 +29,7 @@
 
       db_download_number: "14.5K",
       studio_download_number: "18.5K+",
-      db_v40_label: "DECKBALL 4.0 · IN DEVELOPMENT",
+      db_v40_label: "DECKBALL 4.0 · OUT NOW",
       db_v40_title: "A new chapter for your career.",
       db_v40_body: "24 match moments, ongoing career stories, Elif and Derya, and a new awards night. Explore the next chapter of DeckBall.",
       db_v40_link: "Explore the 4.0 devlog →",
@@ -156,7 +156,7 @@
       db_subtitle: "Futbol Kart RPG",
       db_download_number: "14,5B",
       studio_download_number: "18,5B+",
-      db_v40_label: "DECKBALL 4.0 · GELİŞTİRİLİYOR",
+      db_v40_label: "DECKBALL 4.0 · YAYINDA",
       db_v40_title: "Kariyerine yeni bir sayfa.",
       db_v40_body: "24 maç durumu, devam eden kariyer hikâyeleri, Elif ve Derya ve yeni ödül gecesi. Yenilenen DeckBall’u keşfet.",
       db_v40_link: "4.0 geliştirme günlüğünü incele →",
